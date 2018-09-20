@@ -1,0 +1,22 @@
+<footer style="background-color:#101010;padding-bottom:20px;padding-top:10px;margin-top:20px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<h1>Follow Tweenline on twitter!</h1>
+				<% include twitter %>
+			</div>
+			<div class="col-sm-6">
+				<h1>Navigation</h1>
+				<ul>
+					<li><a href="https://marketplace.yoyogames.com/assets/2909/tweenline-animation-engine" target="_blank">Get Tweenline</a></li>
+					<% for (var i in theme.menu){ %>
+					<li>
+						<a href="<%- url_for(theme.menu[i]) %>">
+							<%= i %></a>
+					</li>
+					<% } %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>

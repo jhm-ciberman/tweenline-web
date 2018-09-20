@@ -1,0 +1,7 @@
+# Activar RewriteEngine
+RewriteEngine on
+ 
+
+RewriteRule ^docs/?$ docs.html
+RewriteRule ^contact/?$ contact.html
+RewriteRule ^demo/?$ demo.html

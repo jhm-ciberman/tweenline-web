@@ -1,0 +1,57 @@
+<!-- OPEN GRAPH: The above 3 meta tags *must* come first in the head;
+    any other head content must come *after* these tags -->
+<title>Tweenline: Game Maker Studio Animation Engine</title>
+
+<%- open_graph({
+	type: 'website',
+	image: url_for('TweenLineLogoOpenGraph.png'),
+	description: "Tweenline, the Tween Based Animation Engine for Game Maker Studio"
+}) %>
+
+<!--
+<meta property="og:url" content="<?%- url_for('/') %>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tweenline Game Maker Animation Engine">
+<meta property="og:description" content="">
+<link rel="image_src" type="image/jpeg" href="<?%-  %>">
+<meta property="og:image" content="<?%- url_for('TweenLineLogoOpenGraph.png') %>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="600">
+-->
+<!-- FAVICON -->
+<link rel="apple-touch-icon" sizes="57x57" href="<%- url_for('apple-touch-icon-57x57.png?v=000XYJYom5') %>">
+<link rel="apple-touch-icon" sizes="60x60" href="<%- url_for('apple-touch-icon-60x60.png?v=000XYJYom5') %>">
+<link rel="apple-touch-icon" sizes="72x72" href="<%- url_for('apple-touch-icon-72x72.png?v=000XYJYom5') %>">
+<link rel="apple-touch-icon" sizes="76x76" href="<%- url_for('apple-touch-icon-76x76.png?v=000XYJYom5') %>">
+<link rel="apple-touch-icon" sizes="114x114" href="<%- url_for('apple-touch-icon-114x114.png?v=000XYJYom5') %>">
+<link rel="apple-touch-icon" sizes="120x120" href="<%- url_for('apple-touch-icon-120x120.png?v=000XYJYom5') %>">
+<link rel="apple-touch-icon" sizes="144x144" href="<%- url_for('apple-touch-icon-144x144.png?v=000XYJYom5') %>">
+<link rel="apple-touch-icon" sizes="152x152" href="<%- url_for('apple-touch-icon-152x152.png?v=000XYJYom5') %>">
+<link rel="apple-touch-icon" sizes="180x180" href="<%- url_for('apple-touch-icon-180x180.png?v=000XYJYom5') %>">
+
+<link rel="icon" type="image/png" href="<%- url_for('favicon-32x32.png?v=000XYJYom5') %>" sizes="32x32">
+<link rel="icon" type="image/png" href="<%- url_for('android-chrome-192x192.png?v=000XYJYom5') %>" sizes="192x192">
+<link rel="icon" type="image/png" href="<%- url_for('favicon-96x96.png?v=000XYJYom5') %>" sizes="96x96">
+<link rel="icon" type="image/png" href="<%- url_for('favicon-16x16.png?v=000XYJYom5') %>" sizes="16x16">
+
+<link rel="manifest" href="<%- url_for('manifest.json?v=000XYJYom5') %>">
+<link rel="mask-icon" href="<%- url_for('safari-pinned-tab.svg?v=000XYJYom5') %>" color="#ff7e00">
+<link rel="shortcut icon" href="<%- url_for('favicon.ico?v=000XYJYom5') %>">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="<%- url_for('mstile-144x144.png?v=000XYJYom5') %>">
+<meta name="theme-color" content="#111111">
+
+<!-- HTML5 -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+<%- css([
+	'css/tweenline-theme.min.css',
+	'css/main.css',
+	'css/tomorrow-night-bright.css'
+]) %>

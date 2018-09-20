@@ -1,0 +1,131 @@
+<div class="jumbotron jumbotron-image">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Create amazing animations with a few lines of code</h1>
+                <p>Tweenline is the fastest and advanced tween based animation engine for
+            Game Maker Studio that allows you to create the most amazing animation sequences
+                    for your game in only a few minutes.</p>
+                <br/>
+                <p>
+                <a class="btn btn-lg btn-primary" target="_blank" href="https://marketplace.yoyogames.com/assets/2909/tweenline-animation-engine" role="button">Get it now »</a>
+                <a class="btn btn-lg btn-secondary" href="<%- url_for('docs2') %>" role="button">View Tweenline docs »</a>
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <br/>
+                <div class="embed-responsive embed-responsive-16by9 ">
+                    <iframe class="embed-responsive-item" style="overflow:hidden" src="https://www.youtube.com/embed/UiWEGN5RcOw?rel=0" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section">
+    <div class="container">
+        <h1>Why Tweenline?</h1>
+        <div class="row">
+        <div class="col-sm-3">
+            <img src="<%- url_for('img/why/why_1.png') %>" class="center-block img-responsive">
+            <h2>Crazy Fast</h2>
+            <p>Tweenline is 3 times faster than the fastest engine available on the Marketplace and with lot of more features.</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="<%- url_for('img/why/why_2.png') %>" class="center-block img-responsive">
+            <h2>Advanced sequencing</h2>
+            <p>Advenced tween sequencing to create amazing intros or cutscenes with only a few lines of code.</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="<%- url_for('img/why/why_3.png') %>" class="center-block img-responsive">
+            <h2>Easy and intuitive</h2>
+            <p>tween_to, tween_from and tween_fromto is all you need to remember. Short syntax and easy to learn.</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="<%- url_for('img/why/why_4.png') %>" class="center-block img-responsive">
+            <h2>Full playback system</h2>
+            <p>Pause, reverse, seek and timescale any sequence or tween. Create frames or seconds based tweens with delta_time support.</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="<%- url_for('img/why/why_5.png') %>" class="center-block img-responsive">
+            <h2>Memory Management</h2>
+            <p>Fire and forget system, Garbage Collector and advanced debug functions let you have total control over your tweens.</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="<%- url_for('img/why/why_6.png') %>" class="center-block img-responsive">
+            <h2>3 different event systems</h2>
+            <p>Choose from three event systems: scripts callbacks, event user or lazy events. Start, Complete, Repeat, Update and more events!</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="<%- url_for('img/why/why_7.png') %>" class="center-block img-responsive">
+            <h2>Animate anything</h2>
+            <p>Choose from 22 built in setters or use your owns! Contains 35 fully optimized Easing equations to create amazing animations.</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="<%- url_for('img/why/why_8.png') %>" class="center-block img-responsive">
+            <h2>Tweenline Labels system</h2>
+            <p>Advanced label system to reference relative time positions with names.</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="section jumbotron" style="padding-top:10px;margin-top:50px;">
+    <div class="container">
+        <h1>Full one-line interactive example</h1>
+        <div class="code-example">
+            <span class="function">tween_to</span>(<span class="object">obj_box</span>, <span class="real">1.2</span>, [<span class="string">"x"</span>,<span class="real">600</span>, <span class="string">"angle"</span>,<span class="real">90</span>, <span class="string">"blend"</span>,<span class="real">c_red</span>, <span class="string">"yoyo"</span>,<span class="real">true</span>, <span class="string">"repeat"</span>,<span class="real">6</span>, <span class="string">"oncomplete"</span>,<span class="function">scr_my_callback</span>]);</div>
+        <p>This will animate obj_box in 1.2 seconds, from the current position, image_angle and image_blend to x=600, image_angle=90 and blending to a red colour with a smooth transition. This will repeat forward and backwards in yoyo mode 6 times , and when finish it will call the callback script. </p>
+        <p><b>Syntax: </b><i>tween_to(target_object, duration, vars_array);</i></p>
+        <br/>
+        <div class="row">
+            <div class="col-xs-3">
+                <div id="demo-animate-btn" class="btn btn-primary btn-lg">Tween!</div>
+                <div id="demo-output">Press the button to try the code</div>
+            </div>
+            <div class="col-xs-9">
+                <div class="demo-box"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container section" style="margin-bottom:20px">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>Powerful, Fast and Amazing</h1>
+        </div>
+        <div class="col-sm-6">
+            <ul style="font-size:18px">
+                <li>Create complex animation sequences with one line of code</li>
+                <li>The most advanced and optimized animation engine for GMStudio</li>
+                <li>Play, pause, seek, timescale or reverse any sequence in real time</li>
+                <li>Animate anything: objects, vars, backgrounds, views</li>
+                <li>250+ functions included, fully documented, interactive examples</li>
+                <li>3 Event systems, time labels, auto memory management</li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container">
+    <div class="section">
+        <h1>What do the Game Maker Experts say</h1>
+        <blockquote>
+            <p>"From all the tween engines out there, this one shines through with its ability to define compounded tween sequences which is very useful for intro screens and special effects. You can also define your own easing functions which is very useful"</p>
+            <p><small>@icuurd12b42, The Mojo Collective</small></p>
+        </blockquote>
+    </div>
+</div>
+
+<div class="container">
+    <div class="jumbotron" style="margin-top:10px">
+    <h1>Fully Documented</h1>
+    <p>Tweenline has a complete online &amp; offline documentation with a lot of interactive examples. Getting started guide. Dedicated support.</p>
+    <p>
+        <a class="btn btn-lg btn-primary" target="_blank" href="https://marketplace.yoyogames.com/assets/2909/tweenline-animation-engine" role="button">Get it now »</a>
+        <a class="btn btn-lg btn-secondary" href="<%- url_for('docs2') %>" role="button">View Tweenline docs »</a>
+    </p>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<nav id="topnavbar" class="navbar navbar-expand-md navbar-dark">
+	<div class="container">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="<%- url_for('/') %>">
+			<img src="<%- url_for('img/TweenLineLogo.png') %>" alt="Tweenline" style="height:100%">
+		</a>
+		<div id="navbarSupportedContent" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<% for (var i in theme.menu){ %>
+					<li>
+						<a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+					</li>
+				<% } %>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="btn-primary" target="_blank" href="https://marketplace.yoyogames.com/assets/2909/tweenline-animation-engine">Get it now</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
