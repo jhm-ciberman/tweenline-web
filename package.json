@@ -5,6 +5,11 @@
   "hexo": {
     "version": "3.7.1"
   },
+  "scripts": {
+    "docs2": "docs_gm generate ../tweenline2 --outputFolder ./source/docs2/ --noOpen && npm run start",
+    "start": "hexo serve",
+    "deploy": "hexo deploy"
+  },
   "dependencies": {
     "hexo": "^3.7.0",
     "hexo-deployer-git": "^0.3.1",
