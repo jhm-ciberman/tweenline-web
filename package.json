@@ -6,8 +6,9 @@
     "version": "3.7.1"
   },
   "scripts": {
-    "docs2": "docs_gm generate ../tweenline2 --outputFolder ./source/docs2/ --noOpen && npm run start",
-    "start": "hexo serve",
+    "docs2": "docs_gm generate ../tweenline2 --outputFolder ./source/docs2/ --noOpen",
+    "start": "npm run docs2 && npm run serve",
+    "serve": "hexo serve",
     "deploy": "hexo deploy"
   },
   "dependencies": {
