@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- OPEN GRAPH: The above 3 meta tags *must* come first in the head;
+    any other head content must come *after* these tags -->
+<title>Tweenline: Game Maker Studio Animation Engine</title>
+
+<meta name="description" content="Tweenline, the Tween Based Animation Engine for Game Maker Studio">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tweenline 1 documentation">
+<meta property="og:url" content="http://ciberman.net/tweenline/docs/index.html">
+<meta property="og:site_name" content="Tweenline">
+<meta property="og:description" content="Tweenline, the Tween Based Animation Engine for Game Maker Studio">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://ciberman.net/tweenline/TweenLineLogoOpenGraph.png">
+<meta property="og:updated_time" content="2019-05-08T04:18:37.660Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tweenline 1 documentation">
+<meta name="twitter:description" content="Tweenline, the Tween Based Animation Engine for Game Maker Studio">
+<meta name="twitter:image" content="http://ciberman.net/tweenline/TweenLineLogoOpenGraph.png">
+
+<!--
+<meta property="og:url" content="<?%- url_for('/') ">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tweenline Game Maker Animation Engine">
+<meta property="og:description" content="">
+<link rel="image_src" type="image/jpeg" href="<?%-  ">
+<meta property="og:image" content="<?%- url_for('TweenLineLogoOpenGraph.png') ">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="600">
+-->
+<!-- FAVICON -->
+<link rel="apple-touch-icon" sizes="57x57" href="/tweenline/apple-touch-icon-57x57.png?v=000XYJYom5">
+<link rel="apple-touch-icon" sizes="60x60" href="/tweenline/apple-touch-icon-60x60.png?v=000XYJYom5">
+<link rel="apple-touch-icon" sizes="72x72" href="/tweenline/apple-touch-icon-72x72.png?v=000XYJYom5">
+<link rel="apple-touch-icon" sizes="76x76" href="/tweenline/apple-touch-icon-76x76.png?v=000XYJYom5">
+<link rel="apple-touch-icon" sizes="114x114" href="/tweenline/apple-touch-icon-114x114.png?v=000XYJYom5">
+<link rel="apple-touch-icon" sizes="120x120" href="/tweenline/apple-touch-icon-120x120.png?v=000XYJYom5">
+<link rel="apple-touch-icon" sizes="144x144" href="/tweenline/apple-touch-icon-144x144.png?v=000XYJYom5">
+<link rel="apple-touch-icon" sizes="152x152" href="/tweenline/apple-touch-icon-152x152.png?v=000XYJYom5">
+<link rel="apple-touch-icon" sizes="180x180" href="/tweenline/apple-touch-icon-180x180.png?v=000XYJYom5">
+
+<link rel="icon" type="image/png" href="/tweenline/favicon-32x32.png?v=000XYJYom5" sizes="32x32">
+<link rel="icon" type="image/png" href="/tweenline/android-chrome-192x192.png?v=000XYJYom5" sizes="192x192">
+<link rel="icon" type="image/png" href="/tweenline/favicon-96x96.png?v=000XYJYom5" sizes="96x96">
+<link rel="icon" type="image/png" href="/tweenline/favicon-16x16.png?v=000XYJYom5" sizes="16x16">
+
+<link rel="manifest" href="/tweenline/manifest.json?v=000XYJYom5">
+<link rel="mask-icon" href="/tweenline/safari-pinned-tab.svg?v=000XYJYom5" color="#ff7e00">
+<link rel="shortcut icon" href="/tweenline/favicon.ico?v=000XYJYom5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/tweenline/mstile-144x144.png?v=000XYJYom5">
+<meta name="theme-color" content="#111111">
+
+<!-- HTML5 -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+<link rel="stylesheet" href="/tweenline/css/tweenline-theme.min.css">
+<link rel="stylesheet" href="/tweenline/css/main.css">
+<link rel="stylesheet" href="/tweenline/css/tomorrow-night-bright.css">
+
+  </head>
+  <body>
+    <nav id="topnavbar" class="navbar navbar-expand-md navbar-dark">
+	<div class="container">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="/tweenline/">
+			<img src="/tweenline/img/TweenLineLogo.png" alt="Tweenline" style="height:100%">
+		</a>
+		<div id="navbarSupportedContent" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				
+					<li>
+						<a href="/tweenline/">Home</a>
+					</li>
+				
+					<li>
+						<a href="/tweenline/docs2">Docs</a>
+					</li>
+				
+					<li>
+						<a href="/tweenline/demo">Showcase</a>
+					</li>
+				
+					<li>
+						<a href="/tweenline/contact">Contact</a>
+					</li>
+				
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<!-- Hey! Psst, you can also get it from here: https://marketplace.yoyogames.com/assets/7385/tweenline-2-animation-engine -->
+					<a class="btn-primary" target="_blank" href="https://ciberman.itch.io/tweenline-2">Get It Now on itch.io</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+    <div class="jumbotron jumbotron-image">
+	<div class="container">
+		<h1>Tweenline 1 documentation</h1>
+		<p>The Tweenline docs has all the necesary to create the most amazing animations with only a few lines of code.</p>
+	</div>
+</div>
+<div class="container">
+	<div class="alert alert-warning">
+	WARNING: This documentation is for the OLD version of Tweenline. Looking for Tweenline 2 Documentation? <a href="../docs2">Click Here</a>
+</div>
+<div class="col-md-4 hidden-print hidden-sm hidden-xs">
+	<nav id="spynavbar">
+		<ul class="nav nav-pills nav-stacked afix-top">
+			<li><a href="#SetUp">Getting Started</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#SetUp">Setup Tweenline</a></li>
+					<li><a href="#YourFirstTween">Your First Tween</a></li>
+				</ul>
+			</li>
+			<li><a href="#TweenCreationFunctions">Tween Creation Functions</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tween_to">tween_to</a></li>
+					<li><a href="#tween_from">tween_from</a></li>
+					<li><a href="#tween_fromto">tween_fromto</a></li>
+					<li><a href="#tween_set">tween_set</a></li>
+					<li><a href="#tween_destroy">tween_destroy</a></li>
+					<li><a href="#tween_duplicate">tween_duplicate</a></li>
+					<li><a href="#tween_exists">tween_exists</a></li>
+					<li><a href="#tween_stagger_to">tween_stagger_to</a></li>
+					<li><a href="#tween_stagger_from">tween_stagger_from</a></li>
+					<li><a href="#tween_stagger_fromto">tween_stagger_fromto</a></li>
+				</ul>
+			</li>
+			<li><a href="#TweenGetters">Tween Getters</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tween_is_playing">tween_is_playing</a></li>
+					<li><a href="#tween_get_target">tween_get_target</a></li>
+					<li><a href="#tween_get_ease">tween_get_ease</a></li>
+					<li><a href="#tween_get_time">tween_get_time</a></li>
+					<li><a href="#tween_get_progress">tween_get_progress</a></li>
+					<li><a href="#tween_get_delay">tween_get_delay</a></li>
+					<li><a href="#tween_get_duration">tween_get_duration</a></li>
+					<li><a href="#tween_get_direction">tween_get_direction</a></li>
+					<li><a href="#tween_get_speed">tween_get_speed</a></li>
+					<li><a href="#tween_get_yoyo">tween_get_yoyo</a></li>
+					<li><a href="#tween_get_repeat">tween_get_repeat</a></li>
+					<li><a href="#tween_get_parent">tween_get_parent</a></li>
+					<li><a href="#tween_get_useframes">tween_get_useframes</a></li>
+					<li><a href="#tween_get_starttime">tween_get_starttime</a></li>
+					<li><a href="#tween_get_endtime">tween_get_endtime</a></li>
+				</ul>
+			</li>
+			<li><a href="#TweenSetters">Tween Setters</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tween_set_ease">tween_set_ease</a></li>
+					<li><a href="#tween_set_time">tween_set_time</a></li>
+					<li><a href="#tween_set_progress">tween_set_progress</a></li>
+					<li><a href="#tween_set_delay">tween_set_delay</a></li>
+					<li><a href="#tween_set_useframes">tween_set_useframes</a></li>
+					<li><a href="#tween_set_speed">tween_set_speed</a></li>
+					<li><a href="#tween_set_yoyo">tween_set_yoyo</a></li>
+					<li><a href="#tween_set_repeat">tween_set_repeat</a></li>
+					<li><a href="#tween_set_target">tween_set_target</a></li>
+					<li><a href="#tween_set_direction">tween_set_direction</a></li>
+					<li><a href="#tween_set_modifiers">tween_set_modifiers</a></li>
+					<li><a href="#tween_set_duration">tween_set_duration</a></li>
+				</ul>
+			</li>
+			<li><a href="#TweenControl">Tween Control</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tween_play">tween_play</a></li>
+					<li><a href="#tween_pause">tween_pause</a></li>
+					<li><a href="#tween_stop">tween_stop</a></li>
+					<li><a href="#tween_restart">tween_restart</a></li>
+					<li><a href="#tween_reverse">tween_reverse</a></li>
+					<li><a href="#tween_resume">tween_resume</a></li>
+					<li><a href="#tween_seek">tween_seek</a></li>
+					<li><a href="#tween_progress">tween_progress</a></li>
+					<li><a href="#tween_render">tween_render</a></li>
+				</ul>
+			</li>
+			<li><a href="#TweenEvents">Tween 3 Different Events Systems</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tween_oncomplete">tween_oncomplete</a></li>
+					<li><a href="#tween_onreversecomplete">tween_onreversecomplete</a></li>
+					<li><a href="#tween_onupdate">tween_onupdate</a></li>
+					<li><a href="#tween_onrepeat">tween_onrepeat</a></li>
+					<li><a href="#tween_onstart">tween_onstart</a></li>
+				</ul>
+			</li>
+	
+			<li><a href="#TweenlineCreation">Tweenline Add Functions</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tweenline_create">tweenline_create</a></li>
+					<li><a href="#tweenline_destroy">tweenline_destroy</a></li>
+					<li><a href="#tweenline_exists">tweenline_exists</a></li>
+				</ul>
+			</li>
+			<li><a href="#TweenlineAdd">Tweenline Add Functions</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tweenline_add">tweenline_add</a></li>
+					<li><a href="#tweenline_remove">tweenline_remove</a></li>
+					<li><a href="#tweenline_to">tweenline_to</a></li>
+					<li><a href="#tweenline_from">tweenline_from</a></li>
+					<li><a href="#tweenline_fromto">tweenline_fromto</a></li>
+					<li><a href="#tweenline_stagger_to">tweenline_stagger_to</a></li>
+					<li><a href="#tweenline_stagger_from">tweenline_stagger_from</a></li>
+					<li><a href="#tweenline_stagger_fromto">tweenline_stagger_fromto</a></li>
+					<li><a href="#tweenline_edit">tweenline_edit</a></li>
+				</ul>
+			</li>
+			<li><a href="#TweenlineGetters">Tweenline Getters</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tweenline_is_playing">tweenline_is_playing</a></li>
+					<li><a href="#tweenline_get_duration">tweenline_get_duration</a></li>
+					<li><a href="#tweenline_get_priority">tweenline_get_priority</a></li>
+					<li><a href="#tweenline_get_list">tweenline_get_list</a></li>
+					<li><a href="#tweenline_get_size">tweenline_get_size</a></li>
+					<li><a href="#tweenline_get_time">tweenline_get_time</a></li>
+					<li><a href="#tweenline_get_speed">tweenline_get_speed</a></li>
+					<li><a href="#tweenline_get_progress">tweenline_get_progress</a></li>
+					<li><a href="#tweenline_get_tweens_at_time">tweenline_get_tweens_at_time</a></li>
+					<li><a href="#tweenline_get_tweens_by_target">tweenline_get_tweens_by_target</a></li>
+				</ul>
+			</li>
+	
+			<li><a href="#TweenlineSetters">Tweenline Setters</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tweenline_set_speed">tweenline_set_speed</a></li>
+					<li><a href="#tweenline_set_yoyo">tweenline_set_yoyo</a></li>
+					<li><a href="#tweenline_set_time">tweenline_set_time</a></li>
+				</ul>
+			</li>
+			<li><a href="#TweenlineControl">Tweenline Control</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tweenline_reverse">tweenline_reverse</a></li>
+					<li><a href="#tweenline_pause">tweenline_pause</a></li>
+					<li><a href="#tweenline_play">tweenline_play</a></li>
+					<li><a href="#tweenline_resume">tweenline_resume</a></li>
+					<li><a href="#tweenline_stop">tweenline_stop</a></li>
+					<li><a href="#tweenline_restart">tweenline_restart</a></li>
+					<li><a href="#tweenline_seek">tweenline_seek</a></li>
+					<li><a href="#tweenline_progress">tweenline_progress</a></li>
+				</ul>
+			</li>
+			<li><a href="#TweenlineLabel">Tweenline Label</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tweenline_label_find_time">tweenline_label_find_time</a></li>
+					<li><a href="#tweenline_label_list">tweenline_label_list</a></li>
+				</ul>
+			</li>
+			<li><a href="#GlobalTweenlineSystemFunctions">Global Tweenline System Functions</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#tween_system_get_tween_count">tween_system_get_tween_count</a></li>
+					<li><a href="#tween_system_get_singleton">tween_system_get_singleton</a></li>
+					<li><a href="#tween_system_is_tweenline">tween_system_is_tweenline</a></li>
+					<li><a href="#tween_system_is_tween">tween_system_is_tween</a></li>
+					<li><a href="#tween_system_set_default_ease">tween_system_set_default_ease</a></li>
+					<li><a href="#tween_system_set_speed">tween_system_set_speed</a></li>
+					<li><a href="#tween_system_lazy_events">tween_system_lazy_events</a></li>
+				</ul>
+			</li>
+			<li><a href="#InstanceSelectionFunctions">Instance Selection Functions</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#instance_select_array">instance_select_array</a></li>
+					<li><a href="#instance_select_filter">instance_select_filter</a></li>
+					<li><a href="#instance_select_numb">instance_select_numb</a></li>
+					<li><a href="#instance_select_sort">instance_select_sort</a></li>
+					<li><a href="#instance_select_filter_sort">instance_select_filter_sort</a></li>
+				</ul>
+			</li>
+			<li><a href="#SettersAndVars">Appendix: SETTERS &amp; VARS</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#DefaultSetters">Default SETTERS</a></li>
+					<li><a href="#BehaviorVars">Tween behavior VARS</a></li>
+					<li><a href="#EventsVars">Tween Events VARS</a></li>
+				</ul>
+			</li>
+			<li><a href="#CustomVars">Appendix: Custom Vars</a>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#cv_system_init">cv_system_init</a></li>
+					<li><a href="#cv_system_room_end">cv_system_room_end</a></li>
+					<li><a href="#cv_set">cv_set</a></li>
+					<li><a href="#cv_get">cv_get</a></li>
+					<li><a href="#cv_has">cv_has</a></li>
+					<li><a href="#cv_delete">cv_delete</a></li>
+					<li><a href="#cv_clear_object">cv_clear_object</a></li>
+				</ul>
+			</li>
+			<li><a href="#CustomVars">Appendix: Deprecated</a>
+			</li><li><a href="#tween_get_persistent">tween_get_persistent</a></li>
+			<li><a href="#tween_set_persistent">tween_set_persistent</a></li>
+		</ul>
+	</nav>
+</div>
+
+	
+<div class="col-md-8"> 
+
+<h1 id="GettingStarted">Getting Started</h1>
+<h2 id="SetUp">Setup Tweenline</h2>
+<p>You can download the Tweenline Animation Engine from the Game Maker Studio Marketplace:</p>
+<a href="https://marketplace.yoyogames.com/assets/2909/tweenline-animation-engine" target="_blank"><button type="button" class="btn btn-primary btn-lg btn-block" style="white-space: normal;">Download Tweenline from Game Maker Studio Marketplace</button></a>
+<br>
+<p>Once you have adquired Tweenline from the marketplace, you only need to do the following:</p>
+<ol>
+<li>Go to <code>Marketplace</code> > <code>My Library</code>. </li>
+<li>Press the <code>Download</code> button next to the Tweenline label.</li>
+<li>Press <code>Add to Project</code>. And then <code>Import All</code>.</li>
+<li>Right click into any of the included files and select <code>Open in Explorer</code>.</li>
+<li>Copy all files to a secure folder outside game maker (for backup)</li>
+</ol>	
+<p>To view the demo files: </p>
+<ol>
+<li><code>File</code> > <code>New</code></li>
+<li>Import. And select <code>Tweenline_demo_project.gmz</code> (from the included files you make the backup)</li>
+<li>Click <code>import</code>.</li>
+</ol>
+<p>To Import the basic tweenline SDK extension into your project:</p>
+<ol>
+<li>Open your existing project or create a new empty project</li>
+<li>Drag <code>tweenline.gmez</code> into the Game Maker Window. (from the included files you make the backup in the 3rd step)</li>
+<li>Right click in the extension, click "Import Resources", "Import All", "ok".</li>
+<li>Enjoy!</li>
+</ol>
+
+<hr>
+<h2 id="YourFirstTween">Your First Tween</h2>
+<p>To create your first Tween, add the following code to the creation event of an object, and place it in an empty room:</p>
+<pre>tween_to(id, 2, array("x",x+300,"patrol",true));</pre>
+<p>This will tween the <code>x</code> variable of the current object from the current value to the value <code>x+300</code> in <code>2</code> seconds and then will repeat the animation backwards and forwards indefinitely.</p>
+
+<hr>
+<h1 id="TweenCreationFunctions">Tween Creation Functions</h1>
+<dt id="tween_to">tween_to( target_object, duration, vars);</dt>
+<dd><p>Creates a new tween that animates the target_object variables to the specified destination values (from the current values) and returns its index.</p>
+<div class="panel panel-default">
+<div class="panel-heading">Arguments</div>
+<div class="panel-body">
+	<dl>    
+<dt>target_object [Game Maker Object]</dt>
+<dd><p>Target object whose properties should be affected. The target can be any game maker object.</p></dd>
+	
+<dt>duration [Real]</dt>
+	<dd><p>Duration in seconds (or frames if "useframes" true is set in the vars parameter)</p></dd>
+	
+<dt>vars [Array]</dt>
+	<dd><p>An object defining the end value for each variable that should be tweened (SETTERS) as well as any special properties like <code>"yoyo"</code>, <code>"repeat"</code>, <code>"ease"</code>, etc. (special VARS).</p>
+	<p>For example, to tween <code>obj_enemy.x</code> to <code>100</code> and <code>obj_enemy.y</code> to <code>200</code> with a bouncy easing 
+	effect and a duration of 1 second, do this: </p>
+
+		<pre>tweenline_to( obj_enemy, 1, array("x",100, "y",200, "ease", ease_bounceout)); </pre>
+		
+	<p>The vars array has the folowing syntax:</p> 
+	
+		<pre>array( "SETTER_name",value, "other_SETTER",value, "etc_SETTER",value, "special_VARS_name",value);</pre>
+	
+	<p>You can mix SETTERS names and special VARS names. Other example: tween <code>obj_player</code>'s alpha to zero while stretching in both <code>x</code> and <code>y</code>. </p>
+		<pre>tweenline_to( obj_player, 2.5, array("xscale",1.2, "yscale",2, "alpha", 0});</pre></dd>
+	
+</dl>
+</div>
+</div>
+<div class="alert alert-success">Note: To get more info about Default SETTERS and special VARS, check the <a href="#SettersAndVars">Apendix: Setters &amp; Vars</a></div>
+</dd>	
+<hr>
+
+<dt id="tween_from">tween_from( target_object, duration, vars);</dt>
+<dd><p>Creates a new tween that animates the target_object variables FROM the specified values (from the current values) and returns its index. </p><p>
+
+</p><p>You define the BEGINNING values and the current values are used as the destination values which is great for doing things like animating objects onto the screen because you can setthem up initially the way you want them to look at the end of the tween and then animate in from elsewhere.</p><p>
+
+<div class="panel panel-default">
+<div class="panel-heading">Arguments</div>
+<div class="panel-body">
+	<dl>  
+<dt>target_object [Game Maker Object]</dt>
+<dd><p>Target object whose properties should be affected. The target can be any game maker object.</p></dd>
+	
+<dt>duration [Real]</dt>
+	<dd><p>Duration in seconds (or frames if "useframes" true is set in the vars parameter)</p></dd>
+	
+<dt>vars [Array]</dt>
+	<dd><p>An object defining the start value for each variable that should be tweened (SETTERS) as well as any special properties like <code>"yoyo"</code>, <code>"repeat"</code>, <code>"ease"</code>, etc. (special VARS).</p>
+	<p>For example, to tween <code>obj_enemy.x</code> from <code>100</code> and <code>obj_enemy.y</code> from <code>200</code> to the current values, with a bouncy easing effect and a duration of 1 second, do this: </p>
+
+		<pre>tweenline_from( obj_enemy, 1, array("x",100, "y",200, "ease", ease_bounceout)); </pre>
+		
+	<p>The vars array has the folowing syntax:</p> 
+	
+		<pre>array( "SETTER_name",value, "other_SETTER",value, "etc_SETTER",value, "special_VARS_name",value);</pre>
+	
+	<p>You can mix SETTERS names and special VARS names. Other example: tween <code>obj_player</code>'s alpha to zero while stretching in both <code>x</code> and <code>y</code>. </p>
+		<pre>tweenline_to( obj_player, 2.5, array("xscale",1.2, "yscale",2, "alpha", 0));</pre></dd>
+	
+</dl>	
+</div>
+</div>
+
+<div class="alert alert-success">Note: To get more info about Default SETTERS and special VARS, check the <a href="#SettersAndVars">Apendix: Setters &amp; Vars</a></div>
+</p></dd>  
+<hr>
+
+<dt id="tween_fromto">tween_fromto( target_object, duration, vars);</dt>
+<dd><p>Allows you to define both the starting and ending values (as opposed to tween_to() and 
+tween_from() tweens which are based on the target's current values at one end or the other).</p><p>
+<div class="panel panel-default">
+<div class="panel-heading">Arguments</div>
+<div class="panel-body">
+	<dl>  
+		<dt>target_object [Game Maker Object]</dt>
+		<dd><p>Target object whose properties should be affected. The target can be any game maker object.</p></dd>
+		<dt>duration [Real]</dt>
+		<dd><p>Duration in seconds (or frames if "useframes" true is set in the vars parameter)</p></dd>
+		<dt>vars [Array]</dt>
+		<dd>
+			<p>An object defining the start and end values for each variable that should be tweened (SETTERS) as well as any special properties like <code>"yoyo"</code>, <code>"repeat"</code>, <code>"ease"</code>, etc. (special VARS).</p>
+			<p>For example, to tween <code>obj_enemy.x</code> from <code>100</code> to <code>150</code> and <code>obj_enemy.y</code> from <code>200</code> to <code>400</code>, with a bouncy easing effect and a duration of 1 second, do this: </p>
+			<pre>tweenline_fromto( obj_enemy, 1, array("x",100, "y",200, "ease", ease_bounceout), array("x",150, "y",400, "ease", ease_bounceout)); </pre>
+			<p>The vars array has the folowing syntax:</p> 
+			<pre>array( "SETTER_name",value, "other_SETTER",value, "etc_SETTER",value, "special_VARS_name",value);</pre>
+		</dd>
+	</dl>	
+</div>
+</div>
+
+
+<div class="alert alert-success">Note: To get more info about Default SETTERS and special VARS, check the <a href="#SettersAndVars">Apendix: Setters &amp; Vars</a></div>
+</p></dd>  
+<hr>
+<dt id="tween_set">tween_set(target, vars);</dt>
+<dd><p>Immediately sets properties of the target accordingly - essentially a zero-duration tween_from() with a more intuitive name.</p>
+
+<div class="alert alert-warning">NOTE: This function is not optimized at all. So, do not use it in the step event. Only use it when you want to set a lot of variables with less code. </div>	
+<div class="alert alert-success">NOTE: For a COMPLETE description of the ARGUMENTS and the usage mode, please refer to <a href="#tween_to">tween_to()</a>. </div>
+
+<pre>tween_set( obj_clown , array("x", 20, "y", mouse_y, "alpha", random(1), set_image_angle, 45, set_customvariable, 24.5));</pre>
+<p>This code do the same as: (But only ONE LINE OF CODE!!!) </p>
+<pre>obj_clown.x = 20;
+obj_clown.y = mouse_y;
+obj_clown.alpha = random(1);
+obj_clown.image_angle = 45;
+obj_clown.customvariable = 24.5;</pre>
+</dd>
+<hr>
+
+<dt id="tween_destroy">tween_destroy(index);</dt>
+<dd><p>Destroys the current tween. Use this to prevent memory leaks when you don't need the tween anymore.</p>
+<div class="alert alert-success">Note: The Tweenline Engine's Garbage Collector will remove the unused tweens for you when the target game makers object does not exists anymore or when the room has changed. So, you only need to use this function when the tween is persistent or if you want to force the Tweenline Engine to free memory usage.</div>
+<pre>mytween = tween_destroy(mytween);</pre></dd>
+
+<hr>
+<dt id="tween_duplicate">tween_duplicate(tween);</dt>
+<dd><p>Create a duplicate of the tween specified and return the new index.</p>
+<pre>mytween2 = tween_duplicate(mytween1);</pre></dd>
+
+<hr>
+<dt id="tween_exists">tween_exists(tween);</dt>
+<dd><p>Returns true if a tween exists and false otherwise.</p>
+<pre>var exists = tween_exists(mytween);</pre></dd>
+
+<dt id="tween_stagger_to">tween_stagger_to(targets_array, duration, vars , stagger);</dt>
+<dd><p>Tweens an array of targets to a common set of destination values (using the current values as the start values), but staggers their start times by a specified amount of time, creating an evenly-spaced sequence with a surprisingly small amount of code.
+</p><p>The parameter stagger is the amount of time in seconds (or frames if the timeline is frames-based) to stagger the start time of each tween.</p>
+<p>wave_amount (optional) indicates how many instances will grouped in one "wave". For example, if you want to animate 30 obj_box placed one after another in a 6 rows and 5 columns, and you want to generate 5 staggers of 6 instances (one stagger for each column), you neeed to pass 6 as the value of waves_amount. The default is 1, meaning that each instance will be staggered. </p>
+<div class="alert alert-success">For the other parameters, see tween_to</div>
+<p>Returns an array of the indexes of the tweens that has been created</p>
+<pre>tweens_array = tween_stagger_to(array(obj_box1, obj_box2, obj_box3), 2.8,  array("x", 800,"angle",270, "ease", ease_backout), 0.4);</pre></dd>
+
+<dt id="tween_stagger_from">tween_stagger_from(targets_array, duration, vars , stagger);</dt>
+<dd><p>Tweens an array of targets from a common set of destination values (using the current values as the end values), but staggers their start times by a specified amount of time, creating an evenly-spaced sequence with a surprisingly small amount of code.</p>
+<p>The parameter stagger is the amount of time in seconds (or frames if the timeline is frames-based) to stagger the start time of each tween.</p>
+<div class="alert alert-success">For the optional parameter wave_amount see <a href="#tween_stagger_to">tween_stagger_to</a></div>
+<div class="alert alert-success">For the other parameters, see tween_to</div>
+<p>Returns an array of the indexes of the tweens that has been created</p>
+<pre>tweens_array = tween_stagger_from(array(obj_box1, obj_box2, obj_box3), 2.8,  array("x", 800,"angle",270, "ease", ease_backout), 0.4);</pre></dd>
+
+<dt id="tween_stagger_fromto">tween_stagger_fromto(targets_array, duration, from_vars, to_vars , stagger);</dt>
+<dd><p>Tweens an array of targets from and to a common set of destination values, but staggers their start times by a specified amount of time, creating an evenly-spaced sequence with a surprisingly small amount of code.</p>
+<p>The parameter stagger is the amount of time in seconds (or frames if the timeline is frames-based) to stagger the start time of each tween.</p>
+<div class="alert alert-success">For the optional parameter wave_amount see <a href="#tween_stagger_to">tween_stagger_to</a></div>
+<div class="alert alert-success">For the other parameters, see tween_to</div>
+<p>Returns an array of the indexes of the tweens that has been created</p>
+<pre>tweens_array = tween_stagger_from(array(obj_box1, obj_box2, obj_box3), 
+2.8,  
+array("x", 20,"angle",90),
+array("x", 800,"angle",270, "ease", ease_backout),
+0.4);</pre></dd>
+
+
+<hr>
+<!---------------- TWEEEEEEEEEEEEEN GETTTEEEEEERRRRSSS ------------->
+<!---------------- TWEEEEEEEEEEEEEN GETTTEEEEEERRRRSSS ------------->
+<!---------------- TWEEEEEEEEEEEEEN GETTTEEEEEERRRRSSS ------------->
+<!---------------- TWEEEEEEEEEEEEEN GETTTEEEEEERRRRSSS ------------->
+<!---------------- TWEEEEEEEEEEEEEN GETTTEEEEEERRRRSSS ------------->
+
+<h1 id="TweenGetters">Tween's Getters</h1>
+
+<hr>
+<dt id="tween_is_playing">tween_is_playing(tween)</dt>
+<dd><p>Returns true if the tween is playing and false if it is in pause.</p></dd>
+
+<hr>
+<dt id="tween_get_target">tween_get_target(tween)</dt>
+<dd><p>Return the tween target id. That is the Game Maker object that is afected by this tween</p></dd>
+
+<hr>
+<dt id="tween_get_ease">tween_get_ease(tween)</dt>
+<dd><p>Gets the ease type of the tween as a string (see <code><a href="#tween_to">tween_to()</a></code> for more info)</p></dd>
+
+<hr>
+<dt id="tween_get_time">tween_get_time(tween)</dt>
+<dd><p>Gets the playhead position of the tween.
+</p><p>Normally in seconds, but you can change the default measure unit 
+from <code>tween_system_init()</code>, or with the function <code>tween_set_useframes()</code>.</p></dd>
+
+<hr>
+<dt id="tween_get_progress">tween_get_progress(index)</dt>
+<dd><p>Gets the progress as a value from 0 to 1. 
+</p><p>The progress is calculated as: (position / duration)</p></dd>
+
+<hr>
+<dt id="tween_get_delay">tween_get_delay(index)</dt>
+<dd><p>Get the initial delay of the tween in seconds (or frames for frames-based tweens)</p></dd>
+
+<hr>
+<dt id="tween_get_duration">tween_get_duration(index)</dt>
+<dd><p>Gets the total duration of the tween (THIS VALUE IT'S NOT AFFECTED BY THE TWEEN SPEED)</p></dd>
+
+<hr>
+<dt id="tween_get_direction">tween_get_direction(index)</dt>
+<dd><p>Gets the direction of the tween
+</p><p>Example: </p><ul>
+<li>direction = 1 means a normal playback</li>
+<li>direction = -1 means a reverse playback</li>
+<li>and so..</li></ul></dd>
+
+<hr>
+<dt id="tween_get_speed">tween_get_speed(index)</dt>
+<dd><p>Gets the speed of the tween</p>
+<p>Example:</p><ul>
+<li>speed = 1 means a normal speed</li>
+<li>speed = 2 means 2 times faster</li>
+<li>speed = 0.5 means 2 times slower</li>
+<li>and so..</li></ul></dd>
+
+<hr>
+<dt id="tween_get_yoyo">tween_get_yoyo(index)</dt>
+<dd><p>Gets true if the yoyo mode is active for the tween specified</p></dd>
+
+<hr>
+<dt id="tween_get_repeat">tween_get_repeat(index)</dt>
+<dd><p>Gets the current repeat count for the specified tween. This is the number of repetitions that left counting the current repeatition (or -1 if it will repeat indefinitely)</p></dd>
+
+<hr>
+<dt id="tween_get_parent">tween_get_parent(index)</dt>
+<dd><p>Gets the parent tweenline index of the specified tween. (or -1 if it has not parent tweenline)</p></dd>
+
+<hr>
+<dt id="tween_get_useframes">tween_get_useframes(index)</dt>
+<dd><p>Returns true if the specified tween uses frames (steps) as a measuring unit of time.
+Returns false if uses seconds.</p></dd>
+
+<hr>
+<dt id="tween_get_starttime">tween_get_starttime(tween)</dt>
+<dd><p>Gets the time at which the animation begins on its parent tweenline (after any delay that was defined).
+If the tween has no parent tweenline, then zero is returned.</p></dd>
+
+<hr>
+<dt id="tween_get_endtime">tween_get_endtime(tween)</dt>
+<dd><p>Gets the time at which the animation end on its parent tweenline (after any delay that was defined).
+If the tween has no parent tweenline, then the duration is returned.</p></dd>
+<hr>
+
+<!---------------- TWEEEEEEEEEEEEEN SETTTEEEEEERRRRSSS ------------->
+<!---------------- TWEEEEEEEEEEEEEN SETTTEEEEEERRRRSSS ------------->
+<!---------------- TWEEEEEEEEEEEEEN SETTTEEEEEERRRRSSS ------------->
+<!---------------- TWEEEEEEEEEEEEEN SETTTEEEEEERRRRSSS ------------->
+<!---------------- TWEEEEEEEEEEEEEN SETTTEEEEEERRRRSSS ------------->
+
+
+<h1 id="TweenSetters">Tween's Setters</h1>
+
+<hr>
+<dt id="tween_set_ease">tween_set_ease(index, ease)</dt>
+<dd><p>Sets the ease type of the tween as a easing function (see tween_to() for more info)</p>
+<pre>tween_set_ease( mytween, ease_backout);</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_time">tween_set_time(index,time)</dt>
+<dd><p>Sets the playhead position of the tween. Normally in seconds, but you can change the default measure unit from tween_system_init, or with the function tween_set_useframes.</p>
+<pre>// move the playhead to the 3rd second 
+// (or 3rd frame for frame based tweens)
+tween_set_time( mytween, 3);</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_progress">tween_set_progress(index, progress)</dt>
+<dd><p>Sets the progress as a value from 0 to 1. This function is the same as tween_set_position, but the time is calculated as a coeficient respect to the duration. The progress is calculated as: (position / duration).</p>
+<pre>//go to the half of the animation
+tween_set_progress( mytween, 0.5);</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_delay">tween_set_delay(index,delay [, add?])</dt>
+<dd><p>Set the initial delay of the tween in steps
+The optional parameter "Add", if true, add the current delay to the preexisting delay</p>
+<pre>//add 1.4 seconds to the current tween delay
+tween_set_delay( mytween, 1.4, true);
+// sets the tween delay to 3.2 seconds
+tween_set_delay( mytween, 3.2);
+</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_useframes">tween_set_useframes(index, use)</dt>
+<dd><p>Sets the value of useframes. Set to true if you want to use frames (steps) as a measuring unit of time for the specified tween. Set to false if you want to use seconds. All values (playhead time, duration, delay, etc) will be converted to the desired measuring unit using the current room_speed as conversion factor.</p>
+<p>Returns false in case of error. (the tween has a parent tweenline, in wich case you need to use <code>tweenline_set_useframes()</code>)</p>
+<div class="alert alert-warning">NOTE: You can change the value of useframes only if the tween is not inside any tweenline. </div>
+<pre>tween_set_useframes( mytween, true);</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_speed">tween_set_speed(index,speed)</dt>
+<dd><p>Sets the direction of the tween. Example: </p> 
+<ul>
+<li>speed = 1 means a normal speed</li>
+<li>speed = 2 means 2 times faster</li>
+<li>speed = 0.5 means 2 times slower</li>
+<li>and so..</li>
+</ul>
+<pre>tween_set_speed( mytween, 2);</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_yoyo">tween_set_yoyo(index, active)</dt>
+<dd><p>Set true if you want the yoyo mode active for this tween, of false otherwise.
+</p>
+<pre>tween_set_yoyo( mytween, true);</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_repeat">tween_set_repeat(index, repeatcount)</dt>
+<dd><p>sets the current repeat count for the specified tween. This is the number of repetitions that left counting the current repeatition (or -1 if it will repeat indefinitely)</p>
+<pre>// sets the tween to repeat 4 times
+tween_set_repeat( mytween, 4);
+// sets the tween to repeat indefinitely
+tween_set_repeat( mytween, -1);
+// sets the tween to no repeat
+tween_set_repeat( mytween, 0);
+</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_target">tween_set_target(index, target)</dt>
+<dd><p>Change the target object for the tween. </p>
+<div class="alert alert-warning">NOTE: All the changes made by a tween in a object will not be reverted.</div>
+<pre>tween_set_target( mytween, obj_clown);</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_direction">tween_set_direction(index,direction)</dt>
+<dd><p>Sets the direction of the tween. Example:</p> 
+<ul>
+<li>direction = 1 means a normal playback</li>
+<li>direction = -1 means a reverse playback</li>
+<li>direction = 4 means a normal playback but 4 times faster</li>
+<li>direction = -4 means a reverse playback but 4 times faster</li>
+<li>and so..</li>
+</ul>
+<pre>tween_set_direction( mytween, -2);</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_modifiers">tween_set_modifiers(index, array)</dt>
+<dd><p>Sets the modifiers array for the tween. This array is passed as the arguments to the easing script.
+array argument is an array of modifiers. (Or undefined, if you wan't to reset the modifiers to default)</p>
+<pre>tween_set_modifiers( mytween, array(2, 3, 0) );</pre>
+</dd>
+
+<hr>
+<dt id="tween_set_duration">tween_set_duration(index,duration)</dt>
+<dd><p>Sets the total duration of the tween (THIS VALUE IT'S NOT AFFECTED BY THE TWEEN SPEED)</p>
+<pre>tween_set_duration( mytween, 5);</pre>
+</dd>
+
+
+<hr>
+<!---------------- TWEEEEEEEEEEEN CONTROL ------------->
+<!---------------- TWEEEEEEEEEEEN CONTROL ------------->
+<!---------------- TWEEEEEEEEEEEN CONTROL ------------->
+<!---------------- TWEEEEEEEEEEEN CONTROL ------------->
+<!---------------- TWEEEEEEEEEEEN CONTROL ------------->
+
+<h1 id="TweenControl">Tween Control</h1>
+
+<hr>
+<dt id="tween_play">tween_play(tween_or_array_of_tweens [, time])</dt>
+<dd><p>Plays the tween (or array of tweens). You can specify a time to play it from the specified time. (optional)</p>
+<pre>tween_play(tween, 2);
+tween_play(array(tween1,tween2,tween3,tween4));</pre>
+</dd>
+
+<hr>
+<dt id="tween_pause">tween_pause(tween_or_array_of_tweens)</dt>
+<dd><p>Pause the tween with the index specified. (or array of tweens)</p>
+<pre>tween_pause(tween);</pre>
+</dd>
+
+<hr>
+<dt id="tween_stop">tween_stop(tween_or_array_of_tweens)</dt>
+<dd><p>Stops the tween and revert all tween states to the init value. If you want to PAUSE the tween use tween_pause instaed. You can pass to the function a tween or a array of tweens</p>
+<pre>tween_set_duration( mytween, 5);</pre>
+</dd>
+
+<hr>
+<dt id="tween_reverse">tween_reverse(tween_or_array_of_tweens [, time])</dt>
+<dd><p>Play the tween (or array of tweens) in reverse from the current position. You can specify a time to play it from the specified time. (optional)</p>
+<pre>tween_reverse( mytween);
+tween_reverse( mytween, 5);</pre>
+</dd>
+
+<hr>
+<dt id="tween_resume">tween_resume( tween_or_array_of_tweens [, time])</dt>
+<dd><p>Resume the tween with the index specified. (or array of tweens). You can specify a time to play it from the specified time. (optional)</p>
+<pre>tween_resume( mytween);
+tween_resume( mytween, 5);</pre>
+</dd>
+
+<hr>
+<dt id="tween_seek">tween_seek( tween_or_array_of_tweens, time);</dt>
+<dd><p>Seeks the the tween (or array of tweens) to a specified time and play it from there. </p>
+<pre>tween_seek( mytween, 5);</pre>
+</dd>
+
+<hr>
+<dt id="tween_progress">tween_progress( tween_or_array_of_tweens, time);</dt>
+<dd><p>Seeks the the tween (or array of tweens) to a specified progress (from 0 to 1) and play it from there. </p>
+<pre>tween_progress( mytween, 1); //seek to the end of the tween</pre>
+</dd>
+
+<hr>
+<dt id="tween_render">tween_render(index)</dt>
+<dd><p>Force the rendering of the tween. Normaly you don't need to use this function. The tweenline engine will manage all automaticaly for you.</p>
+<pre>tween_render( mytween);</pre>
+</dd>
+<hr>
+<!---------------- TWEEEEEEEEENNN LAZY EVENTS ------------->
+<!---------------- TWEEEEEEEEENNN LAZY EVENTS ------------->
+<!---------------- TWEEEEEEEEENNN LAZY EVENTS ------------->
+<!---------------- TWEEEEEEEEENNN LAZY EVENTS ------------->
+<!---------------- TWEEEEEEEEENNN LAZY EVENTS ------------->
+
+<h1 id="TweenEvents">Tween Three Events System</h1>
+<p>Tweenline has three different Event Systems. You can choose the one that fit your needs or use all mixed for your convenience.</p>
+<div class="alert alert-info">Info: For more information about the events that Tweenline has built in and how to use parameters in the Script Event System, check <a href="#EventsVars">Tween Events VARS</a> Apendix. </div>
+<h2>Script Event System</h2>
+<p>The normal event system is the script based event system. When you create your tween, you need to define the callback event scripts your tween will use:</p>
+<pre>///Create event
+//First set the image_index and image_speed, so the animation will be static at the first frame
+image_speed=0;
+image_index=0;
+//Then create a tween to the x=200 for 2 seconds, and with 
+//the callback scr_my_callback on the "oncomplete" event
+tween_to(id, 2, array("x", 200, "oncomplete", scr_my_callback));
+</pre>
+<p>And then, create a <code>scr_my_callback</code> script and put this code in it:</p>
+<pre>image_index=1; //Jump to the frame 1</pre>
+<p>This code will make the sprite jump to frame number 1 when the tween ends.</p>
+<h2>Event User Event System</h2>
+<p>Another way to detect events in Tweenline Engine is to use the user event system. Simply add a user event in your object. To do this you can go to: </p>
+<pre>[OPEN YOUR OBJECT IN THE RESOURCE TREE] > "Add Event" Button > "Other" > "User Defined" > [SELECT ONE OF THE 16 USER EVENTS]</pre>
+<p>Then create your tween, and your callback "user0" event: </p>
+<pre>///Create Event:
+tween_to(id, 2, array("y", y+200, "patrol",true,"onrepeat", "user0")); 
+//Note that we used "user0" string as a callback for the "onrepeat" event</pre>
+<pre>/// In User Event 0
+tween_to(id, .25, array("x", x+30)); </pre>
+<p>This code will make the current instance move from the current position to 200px below. Then, the first tween will repeat backwards and the "onrepeat" event will fire and the "user0" code will execute, causing the instance to move in 0.25 seconds 30 pixels to the right. Then the first tween will reach the initial y position and will repeat other time, causing the "onrepeat" event fire another time and the "user0" code executing and the instance will move 30 pixels more to the right. This cycle will repeat indefinitely. Try it! With only 2 lines of code you have created an amazing animation that can be used for example for the enemy ship movement of a horizontal shooter space game! </p>
+<h2>Lazy Event System</h2>
+<p>Lazy events are a easy way to detect events without create aditional scripts or use event users. You can detect lazy events in the same way you can check if the player press a key with keyboard_check_pressed, but instaed of that, you can use the special lazy events functions listed below.</p>
+
+<pre>//// Create event: 
+// define a tween and declare the "oncomplete" event as a "lazy" event.
+tween = tween_to(id, 2, array("x",x+200, "oncomplete","lazy"));
+
+//// Step event:
+// when the tween performs the "oncomplete" event
+if (tween_oncomplete(tween)) {
+//change the sprite colour to red
+image_blend = c_red;
+//and play a sound of a hit
+audio_play_sound( sound_hit, 1, false);
+}</pre>
+<div class="alert alert-info">Note: The event must be defined as "lazy" and tween_system_lazy_events( eneable ) must be eneabled to get lazy events to work. (It is eneabled by default)</div>
+
+<hr>
+<dt id="tween_oncomplete">tween_oncomplete(tween)</dt>
+<dd><p>Returns true in the single step when the tween performs the "oncomplete" event. </p>
+</dd>
+
+<hr>
+<dt id="tween_onreversecomplete">tween_onreversecomplete(tween)</dt>
+<dd><p>Returns true in the single step when the tween performs the "onreversecomplete" event.  </p>
+</dd>
+
+<hr>
+<dt id="tween_onupdate">tween_onupdate(tween)</dt>
+<dd><p>Returns true in the single step when the tween performs the "onupdate" event. </p>
+</dd>
+
+<hr>
+<dt id="tween_onrepeat">tween_onrepeat(tween)</dt>
+<dd><p>Returns true in the single step when the tween performs the "onrepeat" event. </p>
+</dd>
+
+<hr>
+<dt id="tween_onstart">tween_onstart(tween)</dt>
+<dd><p>Returns true in the single step when the tween performs the "onstart" event. </p>
+</dd>
+<hr>
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+
+
+<h1 id="TweenlineCreation">Tweenline Creation functions</h1>
+
+<hr>
+<dt id="tweenline_create">tweenline_create()</dt>
+<dd><p>Creates a new tweenline and returns his index</p>
+<p>A tweenline is like a timeline with multiple tweens inside it. You can create a tweenline and then append multiple tween inside this timeline. Then, you can play it alltogether with a single function, and control it like a movie (tweenline_play, tweenline_pause, tweenline_reverse, etc). This way, control multiple tweens to create complex animations is posible thanks to Tweenline Engine. </p>
+<p>EXAMPLE:</p>  
+<p>You have all your menu objects (buttons, logo, etc), but you need to create a complex menu animation sequence.</p>
+<pre>//create event obj_animation_controller
+tl = tweenline_create(); 
+tweenline_to ( obj_button_start, 1.2,  array("x", 140));
+tweenline_to ( obj_button_exit,  1.2,  array("x", 250), "-=1"); // note the last argument "-=1"
+tweenline_from ( obj_game_logo,  3.2,  array("x", room_width/2, "y",room_height/2, "scale",0));</pre>  
+
+<p>With this code, we are creating a tweenline, and appending three tweens.</p> 
+<p>Normally the tweens are appended one after another, but you can pass as a last argument, the position of the tween. See tweenline_add to see all the posibilities you have with the position parameter.</p>
+<p>Then, you can control this tweenline:</p>    
+<pre>tweenline_pause( tl );
+tweenline_stop( tl );
+tweenline_reverse( tl );
+tweenline_set_speed( tl );
+// etc</pre>
+
+<div class="alert alert-success"><p>NOTE:</p> 
+		<p>You cannot have a tweenline with some tweens measured in seconds and other tweens measured in frames (steps) because it's imposible to synchronize tweens with diferent measures of time.</p>
+	<p>So, when you add a tween to a tweenline the meassure type setted as default in tween_system_init is ussed.</p>
+	<ul>
+		<li>If you set seconds as default, and you append a tween that uses frames as measure type, the time is converted to seconds ussing the current room_speed.</li>
+		<li>If you set frames as default, and you append a tween that uses seconds as measure type, the time is converted to frames ussing the current room_speed.</li>
+	</ul>
+	<p>The original tween is moddified to use the default measure type, so be careful.</p> 
+</div>    
+</dd>
+
+<hr>
+<dt id="tweenline_destroy">tweenline_destroy(mytweenline)</dt>
+<dd><p>Destroys the current tweenline and the tweens attached. Use this to prevent a memory leak. </p>
+<pre>mytweenline = tweenline_destroy(mytweenline);</pre>
+</dd>
+
+<hr>
+<dt id="tweenline_exists">tweenline_exists(tweenline)</dt>
+<dd><p>Returns true if a tweenline exists and false otherwise.</p>
+<pre>if (tweenline_exists(tweenline)) {
+tweenline_play(tweenline);
+}</pre>
+</dd>
+<hr>
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+<!---------------- TWEEENLINEEEEEEE CREAAATIOOON ------------->
+
+
+<h1 id="TweenlineCreation">Tweenline Add functions</h1>
+
+
+<hr>
+<dt id="tweenline_add">tweenline_add( value [, position="+=0"])</dt>
+<dd><p>Adds a tween or label to the last tweenline created or the tweenline that is currently in edit mode. See tweenline_edit for more info about edit mode.</p>
+<div class="panel panel-default">
+	<div class="panel-heading">Arguments</div>
+	<div class="panel-body">
+		<dl>  
+			<dt>value [Tween index or label string]</dt>
+			<dd><p>The tween or label (string) to add to the tweenline</p></dd>
+			<dt>position: [String, optional]</dt>
+			<dd>
+				<p>The position parameter gives you complete control over the insertion point. By default, it's at the end of the timeline. </p>
+				<p>Use a number to indicate an absolute time in terms of seconds (or frames for frames-based timelines), or you can use a string with a <code>"+="</code> or <code>"-="</code> prefix to offset the insertion point relative to the END of the timeline. For example, <code>"+=2"</code> would place the object 2 seconds after the end, leaving a 2-second gap. <code>"-=2"</code> would create a 2-second overlap. </p>
+				<p>You may also use a label like <code>"mylabel"</code> to have the object inserted exactly at the label or combine a label and a relative offset like <code>"mylabel+=2"</code> to insert the object 2 seconds after <code>"myLabel"</code> or <code>"myLabel-=3"</code> to insert it 3 seconds before <code>"myLabel"</code>. </p>
+			<p>If you define a label that doesn't exist yet, it will automatically be added to the end of the timeline before inserting the tween which can be quite convenient.</p>
+				<p>You can also use the special strings <code>"_end"</code> and <code>"_start"</code> (or <code>"_end+=3"</code> or <code>"_start-=1.4"</code>) to reference to the end time and start time of the last tween added to the tweenline (wich not allways is the same as the total duration of the tweenline). </p>
+			</dd>
+		</dl>	
+	</div>
+</div>
+<pre>//Adds the tween at 3 seconds in absolute position of the tweenline
+tweenline_add(tween, 3);
+
+//Adds the tween 2 seconds after the end of the tweenline
+tweenline_add(tween, "+=2");
+
+//Adds the tween 0.3 seconds before the end of the tweenline
+tweenline_add(tween, "-=.3");
+
+//Adds the tween at the position of "myLabel" (if it doesn't exists, it will be 
+//automatically created at the end of the timeline, in the same position of the tween)
+tweenline_add(tween, "myLabel");
+
+//Adds the tween half second after "myLabel"
+tweenline_add(tween, "myLabel+=.5");
+
+//Adds the label named "otherlabel" 1.5 seconds before "myLabel"
+tweenline_add("otherlabel", "myLabel-=1.5");
+
+//Adds the tween a half second before the end of the last tween added on 
+//the current tweenline ("_end-=0.5" is also valid)
+tweenline_add(tween, "_end-=.5");
+
+//Adds the tween four seconds after the start of the last tween added on the current tweenline
+tweenline_add(tween, "_start-=4");  </pre>
+</dd>
+
+
+<dt id="tweenline_remove">tweenline_remove(value [,destroyTween=false])</dt>
+<dd><p>Removes a tween or label from the last created tweenline or the tweenline that is currently in edit mode. See tweenline_edit for more info about edit mode.</p>
+<p>If you pass a tween as an argument, the script will find the parent of the tween for you, so you don't need to worry to call tweenline_edit. </p>
+<p>If you pass a label (a string), you need to first call tweenline_edit to tell Tweenline engine wich tweenline do you want to edit</p>
+<div class="panel panel-default">
+<div class="panel-heading">Arguments</div>
+<div class="panel-body">
+	<dl>  
+		<dt>value [Tween index or label string]</dt>
+		<dd><p>A tween or label to remove from the timeline</p></dd>
+		<dt>destroyTween: [Boolean]</dt>
+		<dd>
+			<p>If a tween is passed, you can force the destruction of the tween passing true to this argument. By default, the tween will not be destroyed, only removed from the tweenline. It is useful to remove a tween from one tweenline and place it in another tweenline. In this way, the tween will be not destroyed in the process.</p>
+		</dd>
+	</dl>	
+</div>
+</div>
+<pre>// Remove the tween my_tween from his parent tweenline and destroy it
+tweenline_remove( my_tween, true);
+
+// Remove the tween my_tween from his parent tweenline but does not destroy it
+tweenline_remove( my_tween);
+
+// Removes the label "mylabel" from the tweenline my_tweenline
+tweenline_edit(my_tweenline);
+tweenline_remove("mylabel");</pre>
+</dd>
+
+<hr>
+<dt id="tweenline_to">tweenline_to(target_object, duration, vars [, position="+=0"])</dt>
+<dd><p>Adds a tween_to() tween to the end (or elsewhere using the "position" parameter) of the last created Tweenline or the Tweenline that is currently in edit mode. See tweenline_edit for more info about edit mode. </p>
+<div class="alert alert-success">See tween_to for the reference for "target_object", "duration" and "vars" params.</div>
+<div class="alert alert-success">See tweenline_add for the reference for the optional "position" parameter.</div>
+<p>Returns the index of the tween that has been created</p>
+</dd>
+
+<hr>
+<dt id="tweenline_from">tweenline_from(tweenline, target_object, duration, vars [, position="+=0"])</dt>
+<dd><p>Adds a tween_from() tween to the end (or elsewhere using the "position" parameter) of the last created Tweenline or the Tweenline that is currently in edit mode. See tweenline_edit for more info about edit mode. 
+<div class="alert alert-success">See tween_from for the reference for "target_object", "duration" and "vars" params.</div>
+<div class="alert alert-success">See tweenline_add for the reference for the optional "position" parameter.</div>
+</p><p>Returns the index of the tween that has been created</p>
+</dd>
+
+<hr>
+<dt id="tweenline_fromto">tweenline_fromto(tweenline, target_object, duration, from_vars, to_vars [, position="+=0"])</dt>
+<dd><p>Adds a tween_fromto() tween to the end (or elsewhere using the "position" parameter) of the last created Tweenline or the Tweenline that is currently in edit mode. See tweenline_edit for more info about edit mode. 
+<div class="alert alert-success">See tween_fromto for the reference for "target_object", "duration" and "vars" params.</div>
+<div class="alert alert-success">See tweenline_add for the reference for the optional "position" parameter.</div>
+</p><p>Returns the index of the tween that has been created</p>
+</dd>
+
+<hr>
+<dt id="tweenline_stagger_to">tweenline_stagger_to(targets_array, duration, vars , stagger [, position="+=0"])</dt>
+<dd><p>Tweens an array of targets to a common set of destination values (using the current values as the start values), but staggers their start times by a specified amount of time, creating an evenly-spaced sequence with a surprisingly small amount of code.</p>
+<p>The parameter stagger is the amount of time in seconds (or frames if the timeline is frames-based) to stagger the start time of each tween.</p>
+<div class="alert alert-success">For the optional parameter wave_amount see <a href="#tween_stagger_to">tween_stagger_to</a></div>
+<div class="alert alert-success">For the other parameters, see tween_to</div>
+<p>Returns the index of the tween that has been created</p>
+</dd>
+
+<hr>
+<dt id="tweenline_stagger_from">tweenline_stagger_from(targets_array, duration, vars , stagger [, position="+=0"])</dt>
+<dd><p>Tweens an array of targets from a common set of destination values (using the current values as the destination), but staggers their start times by a specified amount of time, creating an evenly-spaced sequence with a surprisingly small amount of code.</p>
+<p>The parameter stagger is the amount of time in seconds (or frames if the timeline is frames-based) to stagger the start time of each tween.</p>
+<div class="alert alert-success">For the optional parameter wave_amount see <a href="#tween_stagger_to">tween_stagger_to</a></div>
+<div class="alert alert-success">For the other parameters, see tween_from</div>
+<p>Returns the index of the tween that has been created</p>
+</dd>
+
+<hr>
+<dt id="tweenline_stagger_fromto">tweenline_stagger_fromto(targets_array, duration, from_vars, to_vars , stagger [, position="+=0"])</dt>
+<dd><p>Tweens an array of targets from and to a common set of destination values, but staggers their start times by a specified amount of time, creating an evenly-spaced sequence with a surprisingly small amount of code.</p>
+<p>The parameter stagger is the amount of time in seconds (or frames if the timeline is frames-based) to stagger the start time of each tween.</p>
+<div class="alert alert-success">For the optional parameter wave_amount see <a href="#tween_stagger_to">tween_stagger_to</a></div>
+<div class="alert alert-success">For the other parameters, see tween_fromto</div>
+<p>Returns the index of the tween that has been created</p>
+</dd>
+
+<hr>
+<dt id="tweenline_edit">tweenline_edit( tweenline );</dt>
+<dd><p>Sets the tweenline specified marked to be edited. All posterior calls to tweenline_add, tweenline_to, tweenline_from, tweenline_fromto and tweenline_remove will be applied to the specified tweenline.</p>
+<p>You first call tweenline_begin passing it an already defined tweenline, and then you can make all the needed modifications.</p>
+<div class="alert alert-warning">Note: This function is in BETA. Unexpected results can ocurr if you modify an already defined tweenline.</div>
+<div class="alert alert-success">Note: YOU DO NOT NEED TO USE THIS FUNCTION IF YOU ARE CREATING THE TWEENLINE FOR THE FIRST TIME. Please refer to tweenline_create for more info about creating tweenlines.</div>
+<pre>
+/// >>> Create event
+twenline = tweenline_create();
+tweenline_to( ... ); //first define your tweenline as you usually do
+tweenline_to( ... );
+tweenline_to( ... );
+
+// >>> mouse left click event
+tweenline_edit(tweenline); //when you have to edit your tweenline, call tweenline_edit
+tweenline_to( ... ); // then, you can alter the existing tweenline
+tweenline_add( ... );
+tweenline_from( ... );
+tweenline_remove( ... );
+tween_system_set_default_ease(ease_bounceout);</pre>
+</dd>
+<hr>
+
+<!---------------- TWEEENLINE GETTTERS ------------->
+<!---------------- TWEEENLINE GETTTERS ------------->
+<!---------------- TWEEENLINE GETTTERS ------------->
+<!---------------- TWEEENLINE GETTTERS ------------->
+<!---------------- TWEEENLINE GETTTERS ------------->
+<!---------------- TWEEENLINE GETTTERS ------------->
+
+
+
+<h1 id="TweenlineGetters">Tweenline Getters</h1>
+
+<hr>
+<dt id="tweenline_is_playing">tweenline_is_playing(index)</dt>
+<dd><p>Returns true if the tweenline is playing (not in pause)</p>
+</dd>
+
+<hr>
+<dt id="tweenline_get_duration">tweenline_get_duration(tweenline)</dt>
+<dd><p>Gets the total duration of the tweenline</p>
+</dd>
+
+<hr>
+<dt id="tweenline_get_tween">tweenline_get_tween(tweenline, index);</dt>
+<dd><p>get the index of the tween number "numb" in the tweenline starting from number 0.</p>
+<div class="alert alert-warning">Note: The are sorted in the order they has been added. So, the first tween doesn't need to be te first chronologically. Use <code>tweenline_get_list</code> or <code>tweenline_get_priority</code> for that purpose.</div>
+</dd>
+
+<hr>
+<dt id="tweenline_get_priority">tweenline_get_priority(tweenline)</dt>
+<dd><p>Returns the index of a ds priority queue (ds_priority_* functions) ordered by the start time of each tween in the tweenline.</p>
+<p>The priority is asigned as follows:</p>
+<ul>
+<li>Priority: The start time of each tween inside the tweenline.</li>
+<li>Value: The tween in the tweenline.</li>
+</ul>
+<p>You can use this priority to access to all tweens inside one tweenline ordered by the start time of each tween:</p>
+<pre>var priority = tweenline_get_priority(tweenline);
+while ( !ds_priority_empty(priority) ){
+var tween = ds_priority_delete_min(priority);
+// Do something with each tween
+}
+// REMEMBER TO DESTROY THE PRIORITY QUEUE WHEN YOU DON'T NEED IT ANYMORE!
+ds_priority_destroy(priority); </pre>
+<div>NOTE: As with all dynamic resources, data structures take up memory and so should always be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game. </div>
+</dd>
+
+<hr>
+<dt id="tweenline_get_list">tweenline_get_list(tweenline)</dt>
+<dd><p>Returns the index of a ds_list (ds_list_* functions) ordered by the start time of each tween in the tweenline.</p>
+<p>You can use this priority to access to all tweens inside one tweenline ordered by the start time of each tween:</p>
+<pre>var list = tweenline_get_list(tweenline);
+var size = ds_list_size(list);
+for (var i=0; i&lt;size; i++) {
+var tween = ds_list_find_value(list, i);
+// do something with each tween
+}
+ds_list_destroy(list); //REMEMBER TO DESTROY THE LIST WHEN YOU DON'T NEED IT ANYMORE
+</pre>
+<div class="alert alert-warning">NOTE: This function is a bit slower than tweenline_get_priority, so If you don't really need it, use tweenline_get_tween or tweenline_get_priority insted.</div>
+<div class="alert alert-warning">NOTE: As with all dynamic resources, data structures take up memory and so should always be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game. 
+</div>
+</dd>
+
+<hr>
+<dt id="tweenline_get_size">tweenline_get_size(tweenline)</dt>
+<dd><p>Gets the number of tweens inside the tweenline</p>
+</dd>
+
+<hr>
+<dt id="tweenline_get_time">tweenline_get_time(easing_function)</dt>
+<dd><p>Gets the playhead position of the tweenline. Normally in seconds, but you can change the default measure unit from tween_system_init</p>
+</dd>
+
+<hr>
+<dt id="tweenline_get_speed">tweenline_get_speed(tweenline)</dt>
+<dd><p>Gets the speed of the tweenline. Example:</p> 
+<ul>
+<li>speed = 1 means a normal speed</li>
+<li>speed = 2 means 2 times faster</li>
+<li>speed = 0.5 means 2 times slower</li>
+<li>and so..</li>
+</ul>
+</dd>
+
+<hr>
+<dt id="tweenline_get_progress">tweenline_get_progress(tweenline)</dt>
+<dd><p>Return the progress of the tweenline as a value from 0 to 1 where 0 is the start of the tweenline, and 1 is the end.</p>
+</dd>
+
+<hr>
+<dt id="tweenline_get_tweens_at_time">tweenline_get_tweens_at_time( tweenline, time, includeOutside)</dt>
+<dd>  
+<p>Return a ds_list with all tweens wich timespan intersects the specified time inside the specified tweenline. </p>
+<p>If includeOutside is true, the tweens that are in the specified time and need to be rendered in this time are added to the ds_list too.</p>
+<div class="alert alert-warning">Note: THIS IS AN ADVANCED FUNCTION (But do not delete it, as it is used by the engine). Normally you do not need to use this function. </div> 
+</dd>
+
+<hr>
+<dt id="tweenline_get_tweens_by_target">tweenline_get_tweens_by_target( tweenline, target, includeOutside)</dt>
+<dd><p>Return a ds_list with all tweens wich the specified target object inside the Tweeline. 
+The tweens in the list are sorted by they orders of start into the Tweenline.</p>
+<div class="alert alert-warning">Note: THIS IS AN ADVANCED FUNCTION (But do not delete it, as it is used by the engine). Normally you do not need to use this function. </div>
+</dd>
+
+<!---------------- TWEENLINE SETTTERRRRSSSS ------------->
+<!---------------- TWEENLINE SETTTERRRRSSSS ------------->
+<!---------------- TWEENLINE SETTTERRRRSSSS ------------->
+<!---------------- TWEENLINE SETTTERRRRSSSS ------------->
+<!---------------- TWEENLINE SETTTERRRRSSSS ------------->
+
+
+<hr>
+<h1 id="TweenlineSetters">Tweenline Setters</h1>
+
+<hr>
+<dt id="tweenline_set_speed">tweenline_set_speed(index, speed)</dt>
+<dd><p>Sets the speed of the tweenline. Example:</p> 
+<ul>
+<li>speed = 1 means a normal speed</li>
+<li>speed = 2 means 2 times faster</li>
+<li>speed = 0.5 means 2 times slower</li>
+<li>and so..</li>
+</ul>
+</dd>
+
+<hr>
+<dt id="tweenline_set_yoyo">tweenline_set_yoyo(index, active)</dt>
+<dd><p>set true if you want the yoyo mode active for this al the tweens inside this tweenline, of false otherwise.</p>
+</dd>
+
+<hr>
+<dt id="tweenline_set_time">tweenline_set_time(tweenline, time)</dt>
+<dd><p>Sets the playhead position of all the tweens in the tweenline. Normally in seconds, but you can change the default measure unit from tween_system_init</p>
+</dd>
+
+<hr>
+<dt id="tweenline_get_progress">tweenline_set_progress(tweenline, progress)</dt>
+<dd><p>Sets the progress of the tweenline as a value from 0 to 1 where 0 is the start of the tweenline, and 1 is the end.</p>
+</dd>
+
+<!---------------- TWEENLINE CONTROL FUNCTIONS ------------->
+<!---------------- TWEENLINE CONTROL FUNCTIONS ------------->
+<!---------------- TWEENLINE CONTROL FUNCTIONS ------------->
+<!---------------- TWEENLINE CONTROL FUNCTIONS ------------->
+<!---------------- TWEENLINE CONTROL FUNCTIONS ------------->
+
+
+<hr>
+<h1 id="TweenlineControl">Tweenline Control Functions</h1>
+
+<hr>
+<dt id="tweenline_reverse">tweenline_reverse(tweenline [, ForcePlay=true])</dt>
+<dd><p>Reverse all the tweens in a tweenline. The optional parameter ForcePlay indicates if the tweenline should start playing. The default is true.
+NOTE: the tweens position will not change, only the playhead direction.</p>
+</dd>
+
+<hr>
+<dt id="tweenline_pause">tweenline_pause(tweenline)</dt>
+<dd><p>Pauses all the tweens in a tweenline. </p>
+</dd>
+
+<hr>
+<dt id="tweenline_play">tweenline_play(tweenline [, timeOrLabel ])</dt>
+<dd><p>Plays all the tweens in a tweenline.</p>
+<p>You can pass also a time or a label string in the timeOrLabel parameter, in wich case, the tweenline will jump to these time or label. </p>
+</dd>
+
+<hr>
+<dt id="tweenline_resume">tweenline_resume(tweenline [, timeOrLabel ])</dt>
+<dd><p>Resume all the tweens in a tweenline.</p>
+<p>You can pass also a time or a label string in the timeOrLabel parameter, in wich case, the tweenline will jump to these time or label.</p>
+</dd>    
+
+<hr>
+<dt id="tweenline_stop">tweenline_stop(tweenline)</dt>
+<dd><p>Stops all the tweens in a tweenline.</p>
+</dd>
+
+<hr>
+<dt id="tweenline_restart">tweenline_restart(tweenline)</dt>
+<dd><p>Restarts all tweens in a tweenline. 
+</p>
+
+<hr>
+<dt id="tweenline_seek">tweenline_seek(tweenline,time)</dt>
+<dd><p>The same as <a href="#tweenline_set_time">tweenline_set_time(tweenline,time);</a>
+</p>
+
+<hr>
+<dt id="tweenline_progress">tweenline_progress(tweenline,progress)</dt>
+<dd><p>The same as <a href="#tweenline_set_progress">tweenline_set_progress(tweenline,progress);</a>
+</p>
+</dd>
+
+<!---------------- TWEENLINE LABEL FUNCTIONS ------------->
+<!---------------- TWEENLINE LABEL FUNCTIONS ------------->
+<!---------------- TWEENLINE LABEL FUNCTIONS ------------->
+<!---------------- TWEENLINE LABEL FUNCTIONS ------------->
+<!---------------- TWEENLINE LABEL FUNCTIONS ------------->
+
+
+
+<hr>
+<h1 id="TweenlineLabel">Tweenline Label Functions</h1>
+
+<hr>
+<dt id="tweenline_label_find_time">tweenline_label_find_time( tweenline, labelname );</dt>
+<dd><p>Returns the time of the label "labelname" in the specified tweenline.</p>
+</dd>
+
+<hr>
+<dt id="tweenline_label_list">tweenline_label_list( tweenline )</dt>
+<dd><p>Returns a ds_list with all the labels inside the tweenline</p>
+</dd>
+<hr>
+<!---------------- TWEENSYSTEEEEEEMMMMMM ------------->
+<!---------------- TWEENSYSTEEEEEEMMMMMM ------------->
+<!---------------- TWEENSYSTEEEEEEMMMMMM ------------->
+<!---------------- TWEENSYSTEEEEEEMMMMMM ------------->
+<!---------------- TWEENSYSTEEEEEEMMMMMM ------------->
+
+
+
+
+<h1 id="GlobalTweenlineSystemFunctions">Global Tweenline System Functions</h1>
+
+<hr>
+<dt id="tween_system_get_tween_count">tween_system_get_tween_count()</dt>
+<dd><p>Gets the number of tweens active in the tween system. You can use it this function to detect memory leaks.</p>
+<pre>//This will draw in the screen the number of active tweens
+draw_text( 20, 20, "Active tweens: "+string(tween_system_get_tween_count()));</pre>
+</dd>
+
+<hr>
+<dt id="tween_system_get_singleton">tween_system_get_singleton()</dt>
+<dd><p>Use <code>tween_system_get_singleton()</code> if you need to access to the obj_tweenline for some reason.
+(But normally you don't need to access to it)
+
+<div class="alert alert-warning">WARNING: DO NOT ACCESS TO obj_tweenline directly!! </div>
+<div class="alert alert-warning">WARNING: AND DO NOT DEACTIVATE IT!</div>
+</p>
+<pre>//Use it this function to get the index of obj_tweenline:
+var tween_controller = tween_system_get_singleton();</pre>
+</dd>
+
+<hr>
+<dt id="tween_system_is_tweenline">tween_system_is_tweenline(tween_or_tweenline)</dt>
+<dd><p>Return true if tween_or_tweenline is a tweenline, false otherwise.</p>
+<pre>// returns false because mytween is a tween not a tweenline
+tween_system_is_tweenline( mytween);
+// returns true because mytweenline is a tweenline not a tween
+tween_system_is_tweenline( mytweenline);</pre>
+</dd>
+
+<hr>
+<dt id="tween_system_is_tween">tween_system_is_tween(tween_or_tweenline)</dt>
+<dd><p>Return true if tween_or_tweenline is a tween, false otherwise.</p>
+<pre>// returns true because mytween is a tween not a tweenline
+tween_system_is_tween( mytween);
+// returns false because mytweenline is a tweenline not a tween
+tween_system_is_tween( mytweenline);</pre>
+</dd>
+
+<hr>
+<dt id="tween_system_set_default_ease">tween_system_set_default_ease(easing_function)</dt>
+<dd><p>Changes the default easing function. The default is ease_quadout</p>
+<pre>tween_system_set_default_ease(ease_bounceout);</pre>
+</dd>
+
+<hr>
+<dt id="tween_system_set_speed">tween_system_set_speed(speed)</dt>
+<dd><p>Sets the GLOBAL speed of the tweenline engine. That is a factor that's used to scale time in the animation where: </p>
+<ul>
+	<li>1 = normal speed (the default), </li>
+	<li>0.5 = half speed, </li>
+	<li>2 = double speed, </li>
+	<li>etc.</li>
+</ul>
+<pre>tween_system_set_speed(.5);</pre>
+</dd>
+
+<hr>
+<dt id="tween_system_set_default_ease">tween_system_setter_add( setter_name, setter_script)</dt>
+<dd><p>Adds a custom SETTER.</p>
+<p>This is only requiered by the HTML5 Platform due to a bug with asset_get_name, so, If you are targeting HTML5, you need to add manually your custom setters. If you are not targeting HTML5, it is not necesary, but it's recomended to use it. </p>
+<p>For more info about custom setters, see __tweenline_SETTERS script.</p>
+<pre>//Adds a custom setter called "myvar" with a setter script called set_myvar
+tween_system_setter_add("myvar", set_myvar);</pre>
+</dd>
+
+<hr>
+<dt id="tween_system_lazy_events">tween_system_lazy_events( eneable)</dt>
+<dd><p>Adds a custom SETTER.</p>
+<p>Eneable or disable the lazy events. The lazy events are a easy way to detect events without ussing extra scripts or extra events. For an example of use of the lazy events check the functions tween_oncomplete, tween_onrepeat, etc. The lazy events can cause a bit of overhead. So, if you are not using it in your game, disable it at the start of your game to gain a little bost.</p>
+</dd>
+
+<hr>
+<!---------------- InstanceSelectionFunctions ------------->
+<!---------------- InstanceSelectionFunctions ------------->
+<!---------------- InstanceSelectionFunctions ------------->
+<!---------------- InstanceSelectionFunctions ------------->
+<!---------------- InstanceSelectionFunctions ------------->
+
+<h1 id="InstanceSelectionFunctions">Instance Selection Functions</h1>
+<p>
+This functions, are designed to generate an array of instances that can be used with the tween_stagger_* and tweenline_stagger_* functions. </p>
+<p>In this way you can, for example,  animate all the obj_dog and obj_cat instances that match a specified criteria and then sort by they "y" position and finally select only the even instances, in only four lines of code:
+</p>
+<pre>
+var arr = instance_select_filter(array(obj_dog, obj_cat), set_x, room_width/2);
+arr = instance_select_sort(arr,set_y);
+arr = instance_select_numb(arr,"mod",2);
+tween_stagger_to(arr, 1, array("blend",c_red), 0.2);
+</pre>
+<hr>
+<dt id="instance_select_array">instance_select_array( obj_or_instance_or_array_of_them [, array_to_prepend] )</dt>
+<dd><p>Returns an array of all the INSTANCES (not objects, INSTANCES) passed. If no instance match the specified query, then undefined is returned. </p>
+
+<p>obj_or_instance_or_array_of_them: This argument can be:</p>
+<ol>
+	<li>An object id (all instances of this object will be sorted)</li>
+	<li>An instance id </li>
+	<li>An array of objects (all instances of those objects will be sorted)</li>
+	<li>An array of instances</li>
+	<li>An array with a mix of instances and objects</li>
+</ol>
+<p>If you pass an array in array_to_prepend, the array will be prepended to the normal output array. This is useful to concatenate a series of instance_select_* functions. </p>
+<p><b>Example:</b></p>
+	<p>Suppose that you have in your room 6 boxes, 1 player and 3 trees, and 4 enemys. So you need to SELECT an ARRAY that contains:</p>
+	<ul>
+		<li>ALL the instances of the obj_box.</li>
+		<li>ONE specific tree. The instance wich id is 100023.</li>
+		<li>ALL the instances of obj_player (only one will be selected since there is only one instance in the room)</li>
+	</ul>
+	<p>So, you need to call: 
+		<pre>var arr = instance_select_array( array(obj_box, 100023, obj_player));</pre>
+	</p><p>And the output will be an array like this:</p>
+		<pre>[100453, 100054, 100055, 100056, ... , 100455]  </pre>
+<p>The first 6 will be ALL the instances of the boxes, the 7th item will be the tree and the last will be the id of the player. </p>
+</dd>
+
+<hr>
+<dt id="instance_select_filter">instance_select_filter( obj_or_instance_or_array_of_them, setter_script, condition_string, condition_value)</dt>
+<p>This will return an array of instances filtered by the specified condition. 
+</p><p>For more info about obj_or_instance_or_array_of_them argument check <a href="#instance_select_array">instance_select_array();</a></p>
+<p>- setter_script: must be a setter script (wich value will be used for testing)</p>
+<p>For more info about setter script check __tweenline_SETTERS script. </p>
+<p>- condition_string: it will be the condition for testing. The posible values can be:</p>
+	<pre>"&gt;"  "&lt;"  "&gt;="  "&lt;="  "="  "=="  "!="  "&lt;&gt;" </pre>
+<p>- condition_value: must be the value compared to. See the example for more info.</p>
+<p>Example:</p>
+<p>if you want to select the all the obj_tree instances which Y position is less than 180 you can do: </p>
+<pre>var arr = instance_select_filter( obj_tree, set_y, "&lt;", 180);</pre> 
+<p>This will return an array with ALL the ids of the instances of the obj_tree wich y position is below 180.</p>
+</dd>
+
+<hr>
+<dt id="instance_select_numb">instance_select_numb( obj_or_instance_or_array_of_them, condition_string, condition_value [, numb_add=0])</dt>
+<dd><p>This will return an array of instances filtered by the specified condition given by the number of the instance inside the array.</p> 
+<p>For more info about <code>obj_or_instance_or_array_of_them</code> argument check <a href="#instance_select_array">instance_select_array();</a></p>
+<p>- condition_string: it will be the condition for testing. The posible values can be:</p>
+	<pre>"&gt;"  "&lt;"  "&gt;="  "&lt;="  "="  "=="  "!="  "&lt;&gt;"  "mod"  "%"  "mod!"  "%!"  "!mod"  "!%"</pre>
+	
+<p>- condition_value: must be the value compared to. See the example for more info.</p>
+
+<p>The internal process of selection is the following:</p>
+<ol>   
+	<li>First, all instances of <code>obj_or_instance_or_array_of_them</code> are selected and numbered from <code>0</code> to <code>n-1</code> (<code>n</code> is the number of total instances)</li>
+	<li>Then, each instance number is compared using the condition_string and the condition_value</li>
+	<li>If the condition_string is "mod"  "%"  "mod!"  "%!"  "!mod" or "!%" then the numb_add is added to the number of the instance and then, compared using the condition and value.</li>
+	<li>Then, an array containing all the matched instances is returned.</li>
+</ol>   
+	
+<p><b>For example:</b> [ FOR MORE INFO ABOUT THE mod OPERATOR, please reffer to the GM:S manual]</p>
+	<p>If you want to select all odd instances of the obj_box in the room (numbered from the top</p> to the bottom):
+		<pre>var arr = instance_select_sort( obj_box, set_y);
+		arr = instance_select_numb( arr, "!mod", 2);</pre>
+<p>It is the same that saying all instances wich <code>(n mod 2) != 0</code></p>
+	You can also use <code>"mod!"</code>  <code>"!%"</code>  or  <code>"%!"</code> for the same result. 
+	
+	
+<p><b>Another example:</b>  [ FOR MORE INFO ABOUT THE mod OPERATOR, please reffer to the GM:S manual]</p>
+<p>Suppose that you want to select <code>obj_box</code> the instances wich </p>
+	number (sorted from left to right in the room) is 1, 4, 7, 10, etc.  
+	That is the same that all instances wich <code>(n mod 3)+1 == 0</code>
+	So, the formula will be:
+		<pre>(n mod condition_value)+numb_add == 0</pre>
+<p>Then, you need to call:</p>
+		<pre>var arr = instance_select_sort( obj_box, set_x);
+		arr = instance_select_numb( arr, "mod", 3, 1);</pre>
+
+		
+<p><b>The last Example:</b></p>
+<p>if you want to select the firsts 16 obj_tree instances sorted from right to left</p>
+		<pre>var arr = instance_select_sort( obj_tree, set_x, false); 
+		arr = instance_select_filter( arr, "&lt;", 16); </pre>
+<p>This will return an array with ALL the ids of the instances of the <code>obj_tree</code> wich number is below 16. (remember that the numbers starts from zero)</p>
+</dd>
+
+<hr>
+<dt id="instance_select_sort">instance_select_sort( obj_or_instance_or_array_of_them, setter_script [, ascending=true ])</dt>
+<dd><p>Returns an array with all instances specified (check below) sorted by the propietry of the setter_script specified. You can sort ascending or descending.
+
+</p><p>For more info about setter script check <code>__tweenline_SETTERS</code> script. </p>
+
+<p>For more info about <code>obj_or_instance_or_array_of_them</code> argument check <a href="#instance_select_array">instance_select_array();</a></p>
+
+<p><b>Example: </b></p>
+<p>In the room you have 5 instances of obj_box placed at random locations. If you call:</p>
+<pre>var arr = instance_select_sort( obj_box, set_y ); </pre>
+<p>It will return an array with the 5 instances of obj_box sorted from the top box to the</p> bottom box on the room. (using the <code>set_y</code> setter script). This script is useful to use it in conjunction with tween_stagger_to/from/fromto and tweenline_stagger_to/from/fromto functions like:
+<pre>var arr = instance_select_sort( obj_box, set_y );
+tween_stagger_from( arr, 1, array("alpha",0), .5);</pre>
+</dd>
+
+<hr>
+<dt id="instance_select_filter_sort">instance_select_filter_sort( obj_or_instance_or_array_of_them, setter_script, condition_string, condition_value, sort_setter_script [, ascending=true]);</dt>
+<dd><p>Returns an array of instances that is the combination of perform: <a href="#instance_select_filter">instance_select_filter</a> and then <a href="#instance_select_sort">instance_select_sort</a> For more info, please reffer to those functions.</p>
+</dd>
+
+
+
+<!---------------- APENDIXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ------------->
+<!---------------- APENDIXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ------------->
+<!---------------- APENDIXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ------------->
+<!---------------- APENDIXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ------------->
+<!---------------- APENDIXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ------------->
+
+
+<hr>
+<h1 id="SettersAndVars">Appendix: Default SETTERS &amp; VARS</h1>
+<h2 id="DefaultSetters">Default SETTERS</h2>
+
+<p>Tweenline has lots of common variables setters that are incorporated within the engine.
+But you can easily ADD your CUSTOM setters for your variables. Please READ the script <code>__tweenline_SETTERS</code> to add your custom setters.</p>
+
+<p>Below you have a list of the default setters incorporated in the Tweenline engine.You can use both the setter string <code>"name"</code> or the script <code>set_name</code>. The default setters included in the engine are:</p>
+<ul>
+<li>"x" (set_x)</li>
+<li>"y" (set_y)</li>
+<li>"xround" (set_xround) It will do round(x)</li>
+<li>"yround" (set_yround) It will do round(y)</li>
+<li>"speed" (set_speed)</li>
+<li>"hspeed" (set_hspeed)</li>
+<li>"vspeed" (set_vspeed)</li>
+<li>"direction" (set_direction)</li>
+<li>"depth" (set_depth)</li>
+<li>"friction" (set_friction)</li>
+<li>"gravity" (set_gravity)</li>
+<li>"gravity_direction" (set_gravity_direction)</li>
+<li>"image_speed" (set_speed)</li>
+<li>"image_index" or "index" (set_image_index)</li>
+<li>"image_alpha" or "alpha" (set_image_alpha)</li>
+<li>"image_angle" or "angle" (set_image_angle)</li>
+<li>"image_scale" or "scale" (set_image_scale) BOTH image_xscale and image_yscale at the same time</li>
+<li>"image_xscale" or "xscale" (set_image_xscale)</li>
+<li>"image_yscale" or "yscale" (set_image_yscale)</li>
+<li>"health" (set_health)</li>
+<li>"score" (set_score)</li>
+</ul>    
+
+<hr>
+<h2 id="BehaviorVars">Tween behavior VARS</h2>
+
+<p>Below is a full list of special properties you can specify on vars argument. For the special vars you can use both the string <code>"name"</code> or the script <code>var_name</code>.</p>  
+	
+
+<dl>
+<dt>"ease" (var_ease) [script]</dt>
+<dd><p>You can choose from various eases to control the rate of change during the animation, giving it a specific "feel". For example, <code>ease_elasticout</code> or <code>ease_stronginout</code>. For best performance, use one of the Tweenline eases included in the "ease" folder with this extension. For linear animation, use the Tweenline <code>ease_linear</code> ease. The default ease is <code>ease_quadout</code>. (You can always change the default easing script with the <code>tween_system_set_default_ease(ease)</code> function)</p></dd>
+
+<dt>"delay" (var_delay) [Real]</dt>
+<dd><p>Amount of delay in seconds (or frames for frames-based tweens) before the animation should begin.</p></dd>
+
+<dt>"paused" (var_paused) [Boolean]</dt>
+<dd><p>If true, the tween will pause itself immediately upon creation.</p></dd>
+
+<dt>"useframes" (var_useframes) [Boolean]</dt>
+<dd><p>If var_useframes is true, the tweens's timing will be based on frames instead of seconds. This causes both its duration and delay to be based on frames. An animations's timing mode is always determined by its parent timeline.</p></dd>
+	
+<dt>"repeat" (var_repeat) [Integer]</dt>
+<dd><p>Number of times that the animation should repeat after its first iteration. For example, if repeat is 1, the animation will play a total of twice (the initial play plus 1 repeat). To repeat indefinitely, use -1. repeat should always be an integer.</p></dd>
+	
+<dt>"repeatdelay" (var_repeatdelay) [Real] </dt>
+<dd><p>Amount of time in seconds (or frames for frames-based tweens) between repeats. For example, if repeat is 2 and var_repeatdelay is 1, the animation will play initially, then wait for 1 second before it repeats, then play again, then wait 1 second again before doing its final repeat.</p></dd>
+
+<dt>"yoyo" (var_yoyo) [Boolean]</dt>
+<dd><p>If true, every other repeat cycle will run in the opposite direction so that the tween appears to go back and forth (forward then backward).</p>
+<p>So if repeat is 2 and yoyo isfalse, it will look like: <code>start - 1 - 2 - 3 - 1 - 2 - 3 - 1 - 2 - 3 - end</code>.</p>
+<p>But if yoyo is true, it will look like: <code>start - 1 - 2 - 3 - 3 - 2 - 1 - 1 - 2 - 3 - end</code>.</p></dd>
+		
+<dt>"patrol" (var_patrol) [Boolean]</dt>
+<dd><p>Patrol it's a shorhand way of set var_repeat to -1 and var_yoyo to true. If true, every other repeat cycle will run in the opposite direction so that the tween appears to go back and forth indefinitely (forward then backward).</p></dd>
+	
+<dt>"loop" (var_loop) [Boolean] </dt>
+<dd><p>If true, it has the same effect as set var_repeat to -1. The tween will loop indefinitely.</p></dd>
+</dl>
+
+<hr>
+<h2 id="EventsVars">Tween Events VARS</h2>
+
+
+<p></p><p>Below is a full list of special properties you can specify on vars argument: For the special vars you can use both the string <code>"oneventname"</code> or the script <code>var_oneventname</code>. The following list are EVENTS. When you define an event the script passed will be called like:</p>
+<pre>script_passed( script_params[0], script_params[1], script_params[2], ... etc); </pre>
+
+<p>For the params you can use an array that will be passed to the callback script like:</p>
+<pre>tween_to(id,2,array("oncomplete", scr_myscript, "oncompleteparams",array("param1", "param2")));</pre>
+<p>To self-reference the id of the tween in one of the parameters, use "{self}", like: </p>
+<pre>tween_to(id,2,array("oncomplete", scr_myscript, "oncompleteparams", array("{self}", "param2")));</pre>
+<p>If you pass a non array type of argument, the value will be passed as a single argument for the script:</p>
+<pre>tween_to(id,2,array("oncomplete", scr_myscript, "oncompleteparams", my_only_argument ));</pre>
+	
+	
+<dl>
+<dt>"oncomplete" (var_oncomplete) [Callback Script]</dt>
+<dd><p>A script that should be called when the timeline has completed.</p></dd>
+	
+<dt>"oncompleteparams" (var_oncompleteparams) [Array for multiple arguments, other value type for only one argument]</dt>
+<dd><p>An Array of parameters to pass the "oncomplete" script.</p></dd>
+
+<dt>"onreversecomplete" (var_onreversecomplete) [Callback Script]</dt>
+<dd><p>A function that should be called when the Tween/Tweenline has reached its beginning again from the reverse direction. For example, if <code>tweeen_reverse()</code> or <code>tweenline_reverse()</code> is called, the Tween timeline will move back towards its beginning and when its time reaches 0, the passed script to "onreversecomplete" will be called. This can also happen if the timeline is placed in a Tweenline timeline that gets reversed and plays the timeline backwards to (or past) the beginning.</p></dd>
+	
+<dt>"onreversecompleteparams" (var_onreversecompleteparams) [Array for multiple arguments, other value type for only one argument]</dt>
+<dd><p>An Array of parameters to pass the "onreversecomplete" script.</p></dd>
+	
+	
+<dt>"onupdate" (var_onupdate) [Callback Script]</dt>
+<dd><p>A script that should be called every time the Tween/Tweenline updates (on every 
+	frame while the timeline is active)</p></dd>
+
+<dt>"onupdateparams" (var_onupdateparams) [Array for multiple arguments, other value type for only one argument]</dt>
+<dd><p>An Array of parameters to pass the "onupdate" script.</p></dd>
+
+<dt>"onstart" (var_onstart) [Callback Script]</dt></dl></dd>
+<dd><p>A script that should be called when the Tween/Tweenline begins (when its time changes from 0 to some other value which can happen more than once if the timeline is restarted multiple times).</p></dd>
+
+<dt>"onstartparms" (var_onstartparms) [Array for multiple arguments, other value type for only one argument]</dt>
+<dd><p>An Array of parameters to pass the "onstart" script.</p></dd>
+
+<dt>"onrepeat" (var_onrepeat) [Callback Script]</dt>
+<dd><p>A function that should be called each time the Tween/Tweenline repeats.</p></dd>
+
+<dt>"onrepeatparms" (var_onrepeatparms) [Array for multiple arguments, other value type for only one argument]</dt>
+<dd><p>An Array of parameters to pass the "onrepeat" script.</p></dd>
+
+
+
+<!---------------- APENDIXX: CUSTOMVARSSSSSS ------------->
+<!---------------- APENDIXX: CUSTOMVARSSSSSS ------------->
+<!---------------- APENDIXX: CUSTOMVARSSSSSS ------------->
+<!---------------- APENDIXX: CUSTOMVARSSSSSS ------------->
+<!---------------- APENDIXX: CUSTOMVARSSSSSS ------------->
+<!---------------- APENDIXX: CUSTOMVARSSSSSS ------------->
+<!---------------- APENDIXX: CUSTOMVARSSSSSS ------------->
+
+
+
+<hr>
+<h1 id="CustomVars">Appendix: Custom Vars</h1>
+
+<h3>What are custom vars? </h3>
+<p>Custom vars are variables for your game maker objects, that can be created or destroyed dinamically at runtime.</p>
+<p>Custom vars are a bit slower than normal variables, so use only when you need a lazy way to create a variable.</p>
+<p>The principal adventages of custom vars are:</p>
+<ol>
+	<li>You can use <code>cv_has([object=id,] var)</code> to check if the specified object has the customvar "var" defined. </li>
+	<li>You can use <code>cv_get([object=id,] var)</code> to get the customvar of an object, and if it does not exists, the function will return undefined. If you use normal variables, you probably get a compiller error. </li>
+	<li>Other functions you can use are <code>cv_set</code>, <code>cv_delete</code> and <code>cv_clear_object</code>.</li>
+</ol>
+<h3>How do I define a custom var?</h3>
+<p>Simply do:</p>
+<pre>cv_set("_mycustomvar", 300);</pre>
+<p>This will define _mycustomvar inside the current instance and set its value to 300.</p>
+<p>You can also do this to define _mycustomvar in a diferent object:</p>
+<pre>cv_set(obj_box1, "_mycustomvar", 300);</pre>
+<p>This will define _mycustomvar inside all the obj_box1 instances and set their value to 300.</p>
+
+<h3>How do I change the value of a custom var?</h3>
+<p>In the same way, you can use cv_set to override the value of that custom var. If the custom var does not exists in the object, it will be created; if not, the value will be changed.</p>
+
+<h3>How do I get the value of a customvar?</h3>
+<pre>// This will get the value of _mycustomvar inside the current instance:
+var myvalue1 = cv_get("_mycustomvar"); 
+// This will get the value of _mycustomvar inside obj_box1:
+var myvalue2 = cv_set(obj_box1, "_mycustomvar"); </pre>
+
+	
+<h3>But what is the relation of this with the Tweenline Engine?</h3>
+<p>Tweenline integrates the use of custom vars. You can pass a string starting with "_" (underscore) to tell the system that the following value in the array will correspond with the custom var specified. For Example:</p>
+<pre>tween_to( id, 3, array("_mycustomvar",x+600));</pre>
+<p>This, will tween the custom var "_mycustomvar" inside the current instance, from the current value to x+600. If the custom var "_mycustomvar" is not defined in the current instance, the It's defined and the value is set to zero.</p>
+
+
+
+<hr>
+<dt id="cv_system_init">cv_system_init()</dt>
+<dd><p>Inits the custom vars system. Call it once at the begining of the 
+game, before any other cv_ script.</p>
+<div class="alert alert-warning">Note: If you are uning it with tweenline_engine, this call this script is not necesary. Tweenline will init custom vars system automatically. </div>
+</dd>  
+
+<hr>
+<dt id="cv_system_room_end">cv_system_room_end()</dt>
+<dd><p>Call this script in the ROOM END event. This script executes the garbage collector.</p>
+<div class="alert alert-warning">Note: If you are uning it with tweenline_engine, call this script is not necesary. Tweenline will call it for you.</div>
+</dd>  
+
+<hr>
+<dt id="cv_set">cv_set([object = id,] var, value)</dt>
+<dd><p>Sets the custom variable "var" of the specified object to value. If object is not defined, the actual object is used.</p>
+<pre>cv_set("myvariable", 9.5 );</pre>
+</dd>  
+<hr>
+<dt id="cv_get">cv_get([object = id,] var)</dt>
+<dd><p>Gets the custom variable "var" of the specified object. If the value does not exists the script returns undefined. If object is not defined, the actual object is used.</p>
+<pre>var myvariable = cv_get("myvariable");</pre>
+</dd>
+<hr>
+<dt id="cv_has">cv_has([object = id,] var);</dt>
+<dd><p>Chacks if the custom variable "var" exists in object. If object is not defined, the actual object is used.</p>
+<pre>var variable_exists = cv_has("myvariable");</pre>
+</dd>  
+
+<hr>
+<dt id="cv_delete">cv_delete([object = id,] var);</dt>
+<dd><p>Deletes custom variable "var" from of the specified object. If object is not defined, the actual object is used.</p>
+<pre>cv_delete("myvariable");</pre>
+</dd>  
+
+<hr>
+<dt id="cv_clear_object">cv_clear_object(object);</dt>
+<dd><p>Deletes ALL custom variables from of the specified object. </p>
+<pre>cv_clear_object(id);</pre>
+</dd>  
+
+<!---------------- APENDIXX: DEPRECATED ------------->
+<!---------------- APENDIXX: DEPRECATED ------------->
+<!---------------- APENDIXX: DEPRECATED ------------->
+<!---------------- APENDIXX: DEPRECATED ------------->
+<!---------------- APENDIXX: DEPRECATED ------------->
+<!---------------- APENDIXX: DEPRECATED ------------->
+<hr>
+<h1 id="CustomVars">Appendix: Deprecated </h1>
+
+<p>These are the functions/VARS/SETTERS that are deprecated in favor of improvements. Below each function there is an explanation of why it is deprecated</p>
+
+<p><b>Persistent tweens functions: </b>Now the system auto detects persistent tweens. This functions and vars should not be used anymore.</p>
+
+<dt><b>[DEPRECATED]</b> "persistent" (var_persistent) [Boolean] </dt>
+<dd><p>If true, the tween will be persistent, and it will not be destroyed by the tweenline garbage collector. Check tween_set_persistent for more info about tweens persistent mode. </p></dd>
+
+<dt id="tween_get_persistent"><b>[DEPRECATED]</b>tween_get_persistent(tween)</dt>
+<dd><p>Returns true if the tween is persistent, false if not. By default a tween is not persistent. It means that it is deleted when the rooms end, to prevent memory leaks. But you can make a tween persistent with <code>tween_set_persistent(tween, true);</code> This means that the tween will be permament and you should manually destroy with <code>tween_destroy(tween)</code> when you don't need it anymore.</p>
+<p>It can be used to create effects between diferent rooms, or to create transitions from one room to another.</p></dd>
+
+<dt id="tween_set_persistent"><b>[DEPRECATED]</b>tween_set_persistent(tween, persistent)</dt>
+<dd><p>Sets a tween as persistent. By default a tween is not persistent. It means that it is deleted when the rooms end, to prevent memory leaks. But you can make a tween persistent with <code>tween_set_persistent(tween, true);</code>. This means that the tween will be permament and you MUST manually destroy with <code><a href="#tween_destroy">tween_destroy()</a></code> when you don't need it anymore. It can be used to create effects between diferent rooms, or to create transitions from one room to another. </p>
+<pre>tween_set_persistent( mytween, true);</pre>
+</dd>
+
+</div>
+</div>
+
+    <footer style="background-color:#101010;padding-bottom:20px;padding-top:10px;margin-top:20px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<h1>Follow Tweenline on twitter!</h1>
+				<a class="twitter-timeline" data-height="400" data-theme="dark" data-link-color="#FAB81E" href="https://twitter.com/cibermandesigns?ref_src=twsrc%5Etfw">Tweets
+	by cibermandesigns</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+			<div class="col-sm-6">
+			<h1>Get Tweenline</h1>
+				<iframe frameborder="0" src="https://itch.io/embed/419637?bg_color=222222&amp;fg_color=eeeeee&amp;link_color=fb922b&amp;border_color=363636" width="552" height="167"></iframe>
+				<h1>Navigation</h1>
+				<ul>
+					<li><a href="https://marketplace.yoyogames.com/assets/2909/tweenline-animation-engine" target="_blank">Get Tweenline</a></li>
+					
+					<li>
+						<a href="/tweenline/">
+							Home</a>
+					</li>
+					
+					<li>
+						<a href="/tweenline/docs2">
+							Docs</a>
+					</li>
+					
+					<li>
+						<a href="/tweenline/demo">
+							Showcase</a>
+					</li>
+					
+					<li>
+						<a href="/tweenline/contact">
+							Contact</a>
+					</li>
+					
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="/tweenline/js/main.js"></script>
+<script src="/tweenline/js/highlight.pack.js"></script>
+<script>
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date(); a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-53454033-2', 'auto');
+	ga('send', 'pageview');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  </body>
+</html>

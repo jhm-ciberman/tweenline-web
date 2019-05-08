@@ -1,0 +1,137 @@
+h1 {
+	color: #FF7F00;
+}
+
+#spynavbar li {
+	margin: 0;
+	padding: 0px;
+	width: 100%;
+}
+
+#spynavbar li a {
+	padding: 5px !important;
+}
+
+#spynavbar li ul {
+	display: none;
+	padding-left: 20px;
+}
+
+#spynavbar li li.active a {
+	background-color: transparent;
+	border-radius: 0;
+}
+
+#spynavbar li li.active {
+	border-left: 3px solid #FF7F00;
+}
+
+#spynavbar li li.active:hover {
+	border-left: 3px solid #FF7F00;
+}
+
+#spynavbar li.active>ul {
+	display: block;
+}
+
+.affix {
+	padding-top: 20px;
+	top: 0;
+}
+
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+	display: list-item;
+	list-style: disc;
+	margin-left: 30px;
+}
+
+dd {
+	margin-left: 40px;
+}
+
+p {
+	text-align: justify;
+}
+
+pre {
+	border: 2px solid #222;
+	border-left: 5px solid #222;
+	border-radius: 0x;
+}
+
+code {
+	display: inline;
+}
+
+.navbar-brand {
+	padding: 15px !important;
+}
+
+.row-space {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+h2 {
+	font-size: 23px;
+	font-weight: bold;
+}
+
+.jumbotron h1 {
+	font-size: 45px;
+	font-weight: 200;
+}
+
+.jumbotron p {
+	font-size: 20px;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+footer h1 {
+	color: #E4E4E4;
+}
+
+
+#spynavbar li {margin:0;padding:0px; width:100%;border-radius:0;}
+#spynavbar li a {padding:2px 10px !important;border-radius:0;background-color:transparent; }
+#spynavbar > ul > li.active > a {border-left:3px solid #FF7F00;}
+#spynavbar li ul {display:none;padding-left:20px;}
+#spynavbar > ul > li.active > ul > li a {color:rgba(255,255,255,.5);}
+#spynavbar > ul > li.active > ul > li.active {border-left:2px solid rgba(252, 183, 115,.5);}
+#spynavbar > ul > li.active > ul > li:hover {border-left:2px solid rgba(252, 183, 115,.5);}
+#spynavbar li.active > ul {display:block;}
+
+.affix {padding-top: 20px; top:0;}
+h1 {font-size:36px;color:#FF7F00;}
+h2 {font-size:30px}
+h3 {font-size:20px; font-weight:bold; display: list-item; list-style: disc; margin-left: 30px;}
+
+.alert{text-shadow: 1px 1px rgba(0,0,0,.2);}
+dt {margin-left: 20px;list-style: disc;display: list-item; color:rgb(252, 183, 115);}
+.panel dt {color:rgba(255,255,255,.8);}
+dd {margin-top:3px;}
+p {text-align:justify;}
+pre {border:2px solid #222; border-left:5px solid #222; border-radius:0x; background:#0e0e0e !important; color:rgba(255,255,255,.6);}
+code {display:inline;background:#0e0e0e !important;}
+.well .embed-responsive {margin-bottom:10px;}
+
+.jumbotron-image {
+	background-image: url('../img/examples_bk.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* Used in index page  (live demo) */
+.code-example{color:#FFF;font-size:20px;font-family:"Consolas","Lucida Console", Monaco, monospace;background-color:#1E1E1E;padding:10px;margin-top:20px;margin-bottom:20px;}
+.function{color:#FF7E00;}
+.object{color:#00FF00;}
+.real{color:#FFBA75;}
+.string{color:#CC3300;}
+.demo-box{background-color:#FFF;;width:60px; height:60px;display:inline-box;border-radius:6px;}
+#demo-output{margin:5px;}
+ul {padding-left: 20px;}
